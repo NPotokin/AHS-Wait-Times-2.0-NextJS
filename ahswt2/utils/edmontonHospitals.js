@@ -1,0 +1,88 @@
+const EdmontonHospitals = [
+    {
+        key: 'ed1',
+        name: 'Devon General Hospital',
+        info: 'This facility provides a range of healthcare services including an emergency department with limited hours.',
+        img: 'https://smartcdn.gprod.postmedia.digital/nexus/wp-content/uploads/2020/04/0424-dd-hospital2.jpg',
+        route: 'devonGeneralHospital',
+    },
+    {
+        key: 'ed2',
+        name: 'Fort Sask Community Hospital',
+        info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://mclpower.com/wp-content/uploads/2018/01/Fort14.jpg',
+        route: 'fortSaskCommunityHospital',
+    },
+    {
+        key: 'ed3',
+        name: 'Grey Nuns Community Hospital',
+        info: 'This Covenant Health facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/3/35/2008-10-30_Grey_Nuns_Community_Hospital.jpg',
+        route: 'greyNunsCommunityHospital',
+    },
+    {
+        key: 'ed4',
+        name: 'Leduc Community Hospital',
+        info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Leduc_Community_Hospital.jpg',
+        route: 'leducCommunityHospital',
+    },
+    {
+        key: 'ed5',
+        name: 'Misericordia Community Hospital',
+        info: 'This Covenant Health facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://neoslibraries.ca/wp-content/uploads/2/files/sites/2/2023/01/edm10870907-e1675377704311.jpg',
+        route: 'misericordiaCommunityHospital',
+    },
+    {
+        key: 'ed6',
+        name: 'Northeast Community Health Centre',
+        info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://www.albertahealthservices.ca/assets/hospitals/nechc/nechc-image-1.jpg',
+        route: 'northeastCommunityHealthCentre',
+    },
+    {
+        key: 'ed7',
+        name: 'Royal Alexandra Hospital',
+        info: 'This facility provides a range of healthcare services including a 24/7 emergency department',
+        img: 'https://i.cbc.ca/1.5854684.1608839761!/cumulusImage/httpImage/royal-alexandra-hospital.jpg',
+        route: 'royalAlexandraHospital',
+    },
+    {
+        key: 'ed8',
+        name: 'Stollery Childrens Hospital',
+        info: 'This facility provides a range of healthcare services for children including a 24/7 emergency department.',
+        img: 'https://edmonton.citynews.ca/wp-content/blogs.dir/sites/15/Stoller-y-e1671580082700.jpg',
+        route: 'stolleryChildrensHospital',
+    },
+    {
+        key: 'ed9',
+        name: 'Strathcona Community Hospital',
+        info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://cdn.canada247.info/assets/uploads/d84d8752187e82cc9f28c85cfb10db75_-alberta-division-no-11-strathcona-county-sherwood-park-strathcona-community-hospitalhtml.jpg',
+        route: 'srathconaCommunityHospital',
+    },
+    {
+        key: 'ed10',
+        name: 'Sturgeon Community Hospital',
+        info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://beta.ctvnews.ca/content/ctvnews/en/local/edmonton/2021/6/6/1_5458624/jcr%3acontent/root/responsivegrid/image.coreimg.png/1623012759904.png',
+        route: 'sturgeonCommunityHospital',
+    },
+    {
+        key: 'ed11',
+        name: 'University of Alberta Hospital',
+        info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://www.albertahealthservices.ca/assets/hospitals/uah/uah-image-1.jpg',
+        route: 'universityOfAlbertaHospital',
+    },
+    {
+        key: 'ed12',
+        name: 'WestView Health Centre',
+        info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
+        img: 'https://images.squarespace-cdn.com/content/v1/5c6ee576c46f6d403daf7517/1560452141707-2JP6R6TGDNBVXVWIEH3F/Health+Centre+043.jpg',
+        route: 'westViewHealthCentre',
+    },
+]
+
+export default EdmontonHospitals;
