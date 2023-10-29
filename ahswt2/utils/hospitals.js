@@ -5,7 +5,7 @@ const Hospitals = [
         name: 'Alberta Childrens Hospital',
         info: 'This facility provides a range of healthcare services for children up to 18 years old.',
         img: 'https://childrenshospitals.ca/wp-content/uploads/2019/03/achf2.jpg',
-        route: 'albertaChildrensHospital',
+        route: '/facilities/albertaChildrensHospital',
         aboutInfo: 'Alberta Childrens Hospital in Calgary partnering together with children, youth, families, staff and physicians to provide the utmost in excellent care. We treat each other with respect, listen to one another, share ideas and information, ask and answer questions, create a safe environment for interaction, and make decisions together.',
         contactInfo: {
             adress:{
@@ -23,7 +23,7 @@ const Hospitals = [
         name: 'Foothills Medical Centre',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://i.cbc.ca/1.4868516.1679528199!/fileImage/httpImage/image.JPG_gen/derivatives/16x9_780/foothills-medical-centre-hospital.JPG',
-        route: 'foothillsMedicalCentre',
+        route: '/facilities/foothillsMedicalCentre',
         aboutInfo: 'The Foothills Medical Centre (FMC), one of Canadas largest hospitals, provides advanced healthcare services to more than two million people.',
         contactInfo: {
             adress:{
@@ -42,7 +42,7 @@ const Hospitals = [
         name: 'Peter Lougheed Centre',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://i.cbc.ca/1.5840643.1607971692!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_780/peter-lougheed-centre-calgary-drone-shots.jpg',
-        route: 'peterLougheedCentre',
+        route: '/facilities/peterLougheedCentre',
         aboutInfo: 'A full-service, acute care hospital offering care to more than 150,000 patients annually. Peter Lougheed Centre is southern Alberta centre of excellence for hematology, respiratory, vascular surgery and addictions and mental health.',
         contactInfo: {
             adress:{
@@ -61,7 +61,7 @@ const Hospitals = [
         name: 'Rockyview General Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department',
         img: 'https://i.cbc.ca/1.5840633.1655256865!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_780/rockyview-general-hospital-calgary-drone-shots.jpg',
-        route: 'rockyviewGeneralHospital',
+        route: '/facilities/rockyviewGeneralHospital',
         aboutInfo: 'Caring for nearly 220,000 patients every year, Rockyview General Hospital (RGH) offers a full range of acute and outpatient care, including Emergency, Critical Care, Urology and Ophthalmology.',
         contactInfo: {
             adress:{
@@ -80,7 +80,7 @@ const Hospitals = [
         name: 'South Health Campus',
         info: 'South Health Campus (SHC) is a full service 272-bed hospital, supporting over 19,000 inpatients per year',
         img: 'https://kasian.com/wp-content/uploads/2022/08/AB-Health-Services-project.jpg',
-        route: 'southHealthCampus',
+        route: '/facilities/southHealthCampus',
         aboutInfo: 'The South Health Campus (SHC) is more than a place to treat illness and disease. By inspiring a wellness mindset, we focus on supporting, encouraging and assisting people along their health and wellness journey.',
         contactInfo: {
             adress:{
@@ -99,7 +99,7 @@ const Hospitals = [
         name: 'Airdrie Community Health Centre',
         info: 'Providing a wide range of health services to residents and families living in and around Airdrie.',
         img: 'https://content.betterimpact.com/files/agency/14020/airdrie-urgent-care.png',
-        route: 'airdrieCommunityHealthCentre',
+        route: '/facilities/airdrieCommunityHealthCentre',
         aboutInfo: 'The Airdrie Community Health Centre, providing a wide range of health services to residents and families living in and around Airdrie.',
         contactInfo: {
             adress:{
@@ -117,7 +117,7 @@ const Hospitals = [
         name: 'Cochrane Community Health Centre',
         info: 'This facility is wheelchair accessible',
         img: 'https://dht7q8fif4gks.cloudfront.net/2019-11/toby%20award.png',
-        route: 'cochraneCommunityHealthCentre',
+        route: '/facilities/cochraneCommunityHealthCentre',
         aboutInfo: 'Provides a wide range of health services that may include prenatal / postpartum services, health promotion / disease and injury prevention services, well child services, immunizations, communicable disease control, and school health services.',
         contactInfo: {
             adress:{
@@ -135,7 +135,7 @@ const Hospitals = [
         name: 'Sheldon M. Chumir Health Centre',
         info: 'This facility provides 24/7 care for people with injuries or illnesses that are not life threatening. Other healthcare services have limited hours.',
         img: 'https://commissioning.ca/wp-content/uploads/2020/12/ctc_front.jpg',
-        route: 'sheldonMChumirCentre',
+        route: '/facilities/sheldonMChumirCentre',
         aboutInfo: 'Medical care for complex or urgent health concerns. Urgent care services are for people who have unexpected but non-life-threatening health concerns that usually require same-day treatment.',
         contactInfo: {
             adress:{
@@ -153,7 +153,7 @@ const Hospitals = [
         name: 'South Calgary Health Centre',
         info: 'This facility is wheelchair accessible and has an elevator on site.',
         img: 'https://i.cbc.ca/1.6539458.1659491252!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/south-calgary-health-centre.jpg',
-        route: 'southCalgaryHealthCentre',
+        route: '/facilities/southCalgaryHealthCentre',
         aboutInfo: 'Medical care for complex or urgent health concerns. Urgent care services are for people who have unexpected but non-life-threatening health concerns that usually require same-day treatment.',
         contactInfo: {
             adress:{
@@ -171,7 +171,7 @@ const Hospitals = [
         name: 'Okotoks Health and Wellness Centre',
         info: 'This facility is wheelchair accessible.',
         img: 'https://www.okotoks.ca/sites/default/files/styles/banner_inside/public/pictures/banner-images/family-resource-centre_0.jpg?itok=bhGo86hg',
-        route: 'okotoksHealthAndWellnessCentre',
+        route: '/facilities/okotoksHealthAndWellnessCentre',
         aboutInfo: 'The Okotoks Health and Wellness Centre houses a variety of services, including the Urgent Care Centre, as well as the Okotoks Family Resource Centre.',
         contactInfo: {
             adress:{
@@ -189,7 +189,7 @@ const Hospitals = [
         name: 'Devon General Hospital',
         info: 'This facility provides a range of healthcare services including an emergency department with limited hours.',
         img: 'https://smartcdn.gprod.postmedia.digital/nexus/wp-content/uploads/2020/04/0424-dd-hospital2.jpg',
-        route: 'devonGeneralHospital',
+        route: '/facilities/devonGeneralHospital',
         aboutInfo: 'The Devon General Hospital, providing a range of acute and long-term care, including 24-hour emergency services, home care services, laboratory services, diagnostic imaging and public health.',
         contactInfo: {
             adress:{
@@ -207,7 +207,7 @@ const Hospitals = [
         name: 'Fort Sask Community Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://mclpower.com/wp-content/uploads/2018/01/Fort14.jpg',
-        route: 'fortSaskCommunityHospital',
+        route: '/facilities/fortSaskCommunityHospital',
         aboutInfo: 'The Fort Saskatchewan Community Hospital is an acute care facility, located northeast of Edmonton, offering a range of acute and outpatient care .',
         contactInfo: {
             adress:{
@@ -225,7 +225,7 @@ const Hospitals = [
         name: 'Grey Nuns Community Hospital',
         info: 'This Covenant Health facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://upload.wikimedia.org/wikipedia/commons/3/35/2008-10-30_Grey_Nuns_Community_Hospital.jpg',
-        route: 'greyNunsCommunityHospital',
+        route: '/facilities/greyNunsCommunityHospital',
         aboutInfo: 'The Grey Nuns Community Hospital is a full-service acute care facility. We have served the people of southeast Edmonton since 1988.',
         contactInfo: {
             adress:{
@@ -243,7 +243,7 @@ const Hospitals = [
         name: 'Leduc Community Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Leduc_Community_Hospital.jpg',
-        route: 'leducCommunityHospital',
+        route: '/facilities/leducCommunityHospital',
         aboutInfo: 'The Leduc Community hospital, located 20 kilometers south of Edmonton, provides a range of acute and outpatient care including 24-hour emergency services.',
         contactInfo: {
             adress:{
@@ -261,7 +261,7 @@ const Hospitals = [
         name: 'Misericordia Community Hospital',
         info: 'This Covenant Health facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://neoslibraries.ca/wp-content/uploads/2/files/sites/2/2023/01/edm10870907-e1675377704311.jpg',
-        route: 'misericordiaCommunityHospital',
+        route: '/facilities/misericordiaCommunityHospital',
         aboutInfo: 'The Misericordia Community Hospital is a full-service acute care facility. We have served the people of northwest Edmonton on our current site since 1969.',
         contactInfo: {
             adress:{
@@ -279,7 +279,7 @@ const Hospitals = [
         name: 'Northeast Community Health Centre',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://www.albertahealthservices.ca/assets/hospitals/nechc/nechc-image-1.jpg',
-        route: 'northeastCommunityHealthCentre',
+        route: '/facilities/northeastCommunityHealthCentre',
         aboutInfo: 'The Northeast Community Health Centre, located in northeast Edmonton, offers a range of outpatient and ambulatory care including 24-hour emergency services.',
         contactInfo: {
             adress:{
@@ -297,7 +297,7 @@ const Hospitals = [
         name: 'Royal Alexandra Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department',
         img: 'https://i.cbc.ca/1.5854684.1608839761!/cumulusImage/httpImage/royal-alexandra-hospital.jpg',
-        route: 'royalAlexandraHospital',
+        route: '/facilities/royalAlexandraHospital',
         aboutInfo: 'Named for Queen Alexandra, the Royal Alexandra Hospital (RAH) is located in Edmontons inner-city and serves a diverse community of patients from Edmonton, Alberta, the Territories, and Western Canada.',
         contactInfo: {
             adress:{
@@ -315,7 +315,7 @@ const Hospitals = [
         name: 'Stollery Childrens Hospital',
         info: 'This facility provides a range of healthcare services for children including a 24/7 emergency department.',
         img: 'https://edmonton.citynews.ca/wp-content/blogs.dir/sites/15/Stoller-y-e1671580082700.jpg',
-        route: 'stolleryChildrensHospital',
+        route: '/facilities/stolleryChildrensHospital',
         aboutInfo: 'The Stollery Childrens Hospital in Edmonton, Alberta, is a full-service pediatric hospital and centre for complex pediatric care and research established in 2001',
         contactInfo: {
             adress:{
@@ -333,7 +333,7 @@ const Hospitals = [
         name: 'Strathcona Community Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://cdn.canada247.info/assets/uploads/d84d8752187e82cc9f28c85cfb10db75_-alberta-division-no-11-strathcona-county-sherwood-park-strathcona-community-hospitalhtml.jpg',
-        route: 'srathconaCommunityHospital',
+        route: '/facilities/srathconaCommunityHospital',
         aboutInfo: 'The Strathcona Community Hospital in Sherwood Park is an innovative facility, delivering primary health care, combined with community-based services and a 24-hour emergency department supported by on-site diagnostic services.',
         contactInfo: {
             adress:{
@@ -351,7 +351,7 @@ const Hospitals = [
         name: 'Sturgeon Community Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://beta.ctvnews.ca/content/ctvnews/en/local/edmonton/2021/6/6/1_5458624/jcr%3acontent/root/responsivegrid/image.coreimg.png/1623012759904.png',
-        route: 'sturgeonCommunityHospital',
+        route: '/facilities/sturgeonCommunityHospital',
         aboutInfo: 'Located just northwest of Edmonton, the Sturgeon Community Hospital is a 167-bed hospital that provides a wide variety of health services to the community of St. Albert and surrounding area.',
         contactInfo: {
             adress:{
@@ -369,7 +369,7 @@ const Hospitals = [
         name: 'University of Alberta Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://www.albertahealthservices.ca/assets/hospitals/uah/uah-image-1.jpg',
-        route: 'universityOfAlbertaHospital',
+        route: '/facilities/universityOfAlbertaHospital',
         aboutInfo: 'The University of Alberta Hospital (UAH) is one of Canadas leading academic health sciences centres with a reputation for research, innovation, education, and patient-centred care.',
         contactInfo: {
             adress:{
@@ -387,7 +387,7 @@ const Hospitals = [
         name: 'WestView Health Centre',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://images.squarespace-cdn.com/content/v1/5c6ee576c46f6d403daf7517/1560452141707-2JP6R6TGDNBVXVWIEH3F/Health+Centre+043.jpg',
-        route: 'westViewHealthCentre',
+        route: '/facilities/westViewHealthCentre',
         aboutInfo: 'WestView Health Centre is a medical facility with a 24-hour emergency department located in Stony Plain, Alberta that is operated by Alberta Health Services. It is a 68-bed facility and features hospice care within its continuing care unit.',
         contactInfo: {
             adress:{
@@ -405,7 +405,7 @@ const Hospitals = [
         name: 'Red Deer Regional Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://www.reddeeradvocate.com/wp-content/uploads/2021/02/24344783_web1_191203-RDA-M-170208-RDA--RD-Hospital-.jpg',
-        route: 'redDeerRegionalHospital',
+        route: '/facilities/redDeerRegionalHospital',
         aboutInfo: 'The only regional referral centre for Central Zone, providing specialized healthcare services to over 450,000 people from Central Alberta spanning the area between Drumheller and Two Hills and from Saskatchewan to the Rocky Mountains.',
         contactInfo: {
             adress:{
@@ -423,7 +423,7 @@ const Hospitals = [
         name: 'Innisfail Health Centre',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://www.albertahealthservices.ca/assets/images/facilities/1000315.jpg',
-        route: 'innisfailHealthCentre',
+        route: '/facilities/innisfailHealthCentre',
         aboutInfo: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         contactInfo: {
             adress:{
@@ -441,7 +441,7 @@ const Hospitals = [
         name: 'Lacombe Hospital and Care Centre',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department.',
         img: 'https://content.betterimpact.com/files/agency/14051/LHCC.JPG',
-        route: 'lacombeHospitalAndCareCentre',
+        route: '/facilities/lacombeHospitalAndCareCentre',
         aboutInfo: 'Emergency departments help you with your emergency health needs anytime day or night. They provide care for patients with major trauma, cardiac events, injuries, and general medical problems.',
         contactInfo: {
             adress:{
@@ -459,7 +459,7 @@ const Hospitals = [
         name: 'Grande Prairie Regional Hospital',
         info: 'This facility provides a range of healthcare services including a 24 / 7 emergency department. The Grande Prairie Cancer Centre is located within this facility.',
         img: 'https://www.albertahealthservices.ca/assets/hospitals/gprh/gprh-main-entrance.jpg',
-        route: 'grandePrairieRegionalHospital',
+        route: '/facilities/grandePrairieRegionalHospital',
         aboutInfo: 'An acute care facility in Grande Prairie, offering a wide-range of acute and outpatient care including 24-hour emergency, Grande Prairie Cancer Centre, surgery, mental health, intensive care, obstetrics and pediatrics.',
         contactInfo: {
             adress:{
@@ -477,7 +477,7 @@ const Hospitals = [
         name: 'Chinook Regional Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department. The Jack Ady Cancer Centre is located within this facility.',
         img: 'https://www.albertahealthservices.ca/assets/hospitals/crh/crh-night.jpg',
-        route: 'chinookRegionalHospital',
+        route: '/facilities/chinookRegionalHospital',
         aboutInfo: 'Chinook Regional Hospital (CRH), offering a full range of healthcare services, including a 24/7 emergency department. Providing patient-centered care in south-western Alberta, including acute and subacute care, psychiatric, intensive care and neonatal intensive care',
         contactInfo: {
             adress:{
@@ -495,7 +495,7 @@ const Hospitals = [
         name: 'Medicine Hat Regional Hospital',
         info: 'This facility provides a range of healthcare services including a 24/7 emergency department. The Margery E. Yuill Cancer Centre is located within this facility.',
         img: 'https://www.albertahealthservices.ca/assets/hospitals/mhrh/mhrh-image-home.jpg',
-        route: 'medicineHatRegionalHospital',
+        route: '/facilities/medicineHatRegionalHospital',
         aboutInfo: 'Medicine Hat Regional Hospital (MHRH), providing patient-centered care in south-eastern Alberta. Offering a full range of healthcare services, including a 24/7 emergency department, acute care, intensive care and neonatal intensive care',
         contactInfo: {
             adress:{

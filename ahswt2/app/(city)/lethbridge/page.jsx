@@ -1,20 +1,19 @@
-import React from 'react'
 import Hospitals from '@/utils/hospitals'
+import React from 'react'
 import Link from 'next/link'
 
-const calgaryUrgentCare = Hospitals.filter((hospital) => hospital.municipality === 'CalgaryUC')
+const lethbridgeHospitals = Hospitals.filter((hospital) => hospital.municipality === 'Lethbridge')
 
-
-const UrgentCare = () => {
+const lethbridge = () => {
   return (
     <div className='flex flex-col  pb-20'>
         <h1 className='my-12 text-cyan-700 text-4xl lg:text-7xl xl:text-8xl py-4 pt-4 font-bold text-center'>
-            Calgary Urgent Care Facilities
+        Lethbridge Facilities
         </h1>
 
-    <div className='grid mx-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+    <div className='grid mx-3 grid-cols-1  gap-3'>
          
-      {calgaryUrgentCare.map((item) => (
+      {lethbridgeHospitals.map((item) => (
       <div 
         key={item.key}
         className='w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] mx-auto relative mt-3  rounded-3xl group hover:shadow-2xl shadow-cyan-900 hover:scale-105 duration-1000'>
@@ -36,4 +35,4 @@ const UrgentCare = () => {
   )
 }
 
-export default UrgentCare
+export default lethbridge;

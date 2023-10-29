@@ -21,7 +21,7 @@ export default function Home() {
       </section>  
       <Link 
         href='/start'
-        className='mx-auto p-3 border-4 border-cyan-500 rounded-3xl font-bold text-2xl text-cyan-500 hover:bg-cyan-100'>
+        className='mx-auto p-3 border-4 border-cyan-500 rounded-3xl font-bold text-2xl text-cyan-500 hover:bg-cyan-200'>
         Get Started
       </Link> 
         

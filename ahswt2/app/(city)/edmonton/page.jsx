@@ -1,6 +1,8 @@
-import EdmontonHospitals from '@/utils/edmontonHospitals'
+import Hospitals from '@/utils/hospitals'
 import Link from 'next/link'
 import React from 'react'
+
+const edmontonHospitals = Hospitals.filter((hospital) => hospital.municipality === 'Edmonton')
 
 const Edmonton = () => {
   return (
@@ -11,7 +13,7 @@ const Edmonton = () => {
 
     <div className='grid mx-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
          
-      {EdmontonHospitals.map((item) => (
+      {edmontonHospitals.map((item) => (
       <div 
         key={item.key}
         className='w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] mx-auto relative mt-3  rounded-3xl group hover:shadow-2xl shadow-cyan-900 hover:scale-105 duration-1000'>
@@ -23,7 +25,7 @@ const Edmonton = () => {
             <h1 className='pb-3 text-4xl font-semibold text-cyan-950 '>{item.name}</h1>
             <h1 className='pt-2 pb-4 text-justify text-lg text-cyan-900 font-medium'>{item.info}</h1>
             <Link 
-            href='/'
+            href={item.route}
             className='text-center p-3 rounded-xl text-xl font-semibold bg-cyan-100 text-cyan-500 border-cyan-500 border-2 hover:bg-cyan-200 duration-1000'>Chose Service</Link>
         </div>
       </div>
