@@ -1,6 +1,5 @@
 import React from 'react'
 import Hospitals from "@/utils/hospitals"
-import Link from "next/link"
 import { Header,
          HospitalContactInfo,
          HospitalStats,
@@ -8,6 +7,7 @@ import { Header,
          HospitalGraphDay,
          HospitalGraphHour,
          HospitalGraphWeek} from '@/components/facilityCard/index'
+import HospitalAbout from '@/components/facilityCard/HospitalAbout';
 
 
 const albertaChildrensHospital = () => {
@@ -22,8 +22,18 @@ const albertaChildrensHospital = () => {
         <div className='grid mx-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3'>
           <HospitalImage img={hospital.img} name={hospital.name}/>
           <HospitalContactInfo
-            street={hospital.contactInfo.adress.street} 
+            street={hospital.contactInfo.adress.street}
+            city={hospital.contactInfo.adress.city}
+            zip={hospital.contactInfo.adress.zip} 
+            phone={hospital.contactInfo.phone} 
+            website={hospital.contactInfo.website} 
             />
+          <HospitalAbout 
+            about={hospital.aboutInfo}
+            />
+          <HospitalGraphHour/>
+          <HospitalGraphDay/>
+          <HospitalGraphWeek/>
           
         </div>
     </div>
