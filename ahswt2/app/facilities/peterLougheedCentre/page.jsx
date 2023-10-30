@@ -11,9 +11,9 @@ import dummyHourly from '@/utils/dummyHourly';
 import dummyWeekly from '@/utils/dummyWeek';
 import Hospitals from "@/utils/hospitals"
 
-const albertaChildrensHospital = () => {
+const peterLougheedCentre = () => {
  
-  const hospital = Hospitals.filter((hospital) => hospital.name === 'Alberta Childrens Hospital')[0];
+  const hospital = Hospitals.filter((hospital) => hospital.name === 'Peter Lougheed Centre')[0];
 
   return (
     <div className='flex flex-col pb-20'>
@@ -38,4 +38,4 @@ const albertaChildrensHospital = () => {
   )
 }
 
-export default albertaChildrensHospital
+export default peterLougheedCentre;
