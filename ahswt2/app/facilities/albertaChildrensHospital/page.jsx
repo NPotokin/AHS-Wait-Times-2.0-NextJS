@@ -2,17 +2,22 @@ import React from 'react'
 import Hospitals from "@/utils/hospitals"
 import { Header,
          HospitalContactInfo,
-         HospitalStats,
          HospitalImage,
          HospitalGraphDay,
          HospitalGraphHour,
          HospitalGraphWeek} from '@/components/facilityCard/index'
 import HospitalAbout from '@/components/facilityCard/HospitalAbout';
+import dummyDaily from '@/utils/dummydaily';
+import dummyHourly from '@/utils/dummyHourly';
+import dummyWeekly from '@/utils/dummyWeek';
+
+
+
 
 
 const albertaChildrensHospital = () => {
-  
   const hospital = Hospitals.filter((hospital) => hospital.name === 'Alberta Childrens Hospital')[0];
+  
   
 
   return (
@@ -31,9 +36,9 @@ const albertaChildrensHospital = () => {
           <HospitalAbout 
             about={hospital.aboutInfo}
             />
-          <HospitalGraphHour/>
-          <HospitalGraphDay/>
-          <HospitalGraphWeek/>
+          <HospitalGraphHour data={dummyHourly} />
+          <HospitalGraphDay data={dummyDaily}/>
+          <HospitalGraphWeek data={dummyWeekly}/>
           
         </div>
     </div>

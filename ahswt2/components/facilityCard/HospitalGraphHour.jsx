@@ -1,32 +1,40 @@
+'use client'
+
 import React from 'react'
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import dummyHourly from '@/utils/dummyHourly';
+import { AreaChart,
+         Area,
+         XAxis,
+         YAxis,
+         Tooltip,
+         ResponsiveContainer} from 'recharts'
 
-const HospitalGraphHour = () => {
-
-  const data = dummyHourly;
+const HospitalGraphHour = (props) => {
 
   return (
     <div>
         <div className="bg-cyan-200 flex flex-col rounded-3xl w-[300px] h-[300px] xl:w-[400px] xl:h-[400px]">
-            <div className='mx-auto my-auto  font-bold text-2xl xl:text-4xl text-cyan-800'>
-            
-              <AreaChart
-                width={300}
-                height={300}
-                data={data}
-                margin={{
-                  top: 10,
-                  right: 30,
-                  left: 0,
-                  bottom: 0,
-                }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="time" />
-                <YAxis />
-                <Tooltip />
-                <Area type="monotone" dataKey="waitTime" stroke="#8884d8" fill="#8884d8" />
+            <div className='flex flex-col mx-auto my-auto  font-semibold text-sm text-cyan-800'>
+            <p className='bg-cyan-600 text-cyan-100 mx-auto px-2 py-1 rounded-lg'>
+              Average Wait Time: 45 min
+            </p>
+            <h1 className='mx-auto my-3  font-bold text-xl xl:text-2xl text-cyan-800'>
+                Hourly Graph
+            </h1>
+            <div className='container flex w-full mx-auto'>
+
+           
+            <ResponsiveContainer width={300} height={200}>
+              <AreaChart data={props.data}>
+                <XAxis dataKey='time' stroke="#155e75" tickCount={2} />
+                <YAxis stroke="#155e75" />
+                <Tooltip bac/>
+                <Area type="monotone" dataKey="waitTime" stroke="#155e75" fill="#06b6d4" />
               </AreaChart>
+            </ResponsiveContainer>
+            </div>
+            <p className='mx-auto mt-4  font-semibold text-sm xl:text-md text-cyan-600'>
+                Updated at 17:00 today
+            </p>
             
             </div>
         </div>
