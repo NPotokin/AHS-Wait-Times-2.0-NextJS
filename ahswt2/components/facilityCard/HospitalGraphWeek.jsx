@@ -12,8 +12,8 @@ import { AreaChart,
 const HospitalGraphWeek = (props) => {
   
   return (
-    <div>
-        <div className="bg-cyan-200 flex flex-col rounded-3xl w-[300px] h-[300px] xl:w-[400px] xl:h-[400px]">
+    <div className='bg-cyan-200 min-w-[300px] max-w-[450px] w-full aspect-square rounded-3xl'>
+        <div className="flex flex-col rounded-3xl pt-8">
             <div className='flex flex-col mx-auto my-auto  font-semibold text-sm text-cyan-800'>
             <p className='bg-cyan-600 text-cyan-100 mx-auto px-2 py-1 rounded-lg'>
               Average Wait Time: 120 min

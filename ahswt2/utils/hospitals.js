@@ -133,7 +133,7 @@ const Hospitals = [
         municipality: 'CalgaryUC',
         key: 'SMCHC',
         name: 'Sheldon M. Chumir Health Centre',
-        info: 'This facility provides 24/7 care for people with injuries or illnesses that are not life threatening. Other healthcare services have limited hours.',
+        info: 'This facility provides care for people with injuries o that are not life threatening.',
         img: 'https://commissioning.ca/wp-content/uploads/2020/12/ctc_front.jpg',
         route: '/facilities/sheldonMChumirCentre',
         aboutInfo: 'Medical care for complex or urgent health concerns. Urgent care services are for people who have unexpected but non-life-threatening health concerns that usually require same-day treatment.',

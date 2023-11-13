@@ -21,7 +21,7 @@ const CitySeclection = () => {
              className="min-w-[300px] max-w-[450px] w-full aspect-square object-cover rounded-3xl opacity-40" />
         <div className="absolute  top-[50%] left-[50%] translate-x-[-50%] 
             translate-y-[-50%] w-full px-8 text-center">
-            <h1 className='pb-3 text-2xl md:text-3xl lg:text-4xl font-semibold text-cyan-950 '>{item.name}</h1>
+            <h1 className='pb-3  text-4xl font-semibold text-cyan-950 '>{item.name}</h1>
             <p className='pt-2 pb-4 text-justify text-md md:text-lg lg:text-xl text-cyan-900 font-medium'>{item.info}</p>
             <Link 
             href={item.route}

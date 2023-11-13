@@ -19,7 +19,7 @@ const misericordiaCommunityHospital = () => {
     <div className='flex flex-col pb-20'>
         <Header name={hospital.name}/>
 
-        <div className='grid mx-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3'>
+        <div className='grid mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3'>
           <HospitalImage 
             img={hospital.img} 
             name={hospital.name}/>
