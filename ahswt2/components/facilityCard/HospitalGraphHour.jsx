@@ -1,5 +1,5 @@
 'use client'
-
+import { useState, useEffect } from 'react';
 import React from 'react'
 import { AreaChart,
          Area,
@@ -9,6 +9,24 @@ import { AreaChart,
          ResponsiveContainer} from 'recharts'
 
 const HospitalGraphHour = (props) => {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch('http://localhost:3000/api/hourlyGraph');
+        const fetchedData = await response.json();
+        const filteredData = fetchedData.data.filter((item) => item.slug === props.slug);
+        console.log(filteredData)
+        setData(filteredData);
+      } catch (error) {
+        console.error('Error fetching or processing data:', error);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <div className='bg-cyan-200 min-w-[300px] max-w-[450px] w-full aspect-square rounded-3xl'>
@@ -24,11 +42,11 @@ const HospitalGraphHour = (props) => {
 
            
             <ResponsiveContainer width={300} height={200}>
-              <AreaChart data={props.data}>
-                <XAxis dataKey='time' stroke="#155e75" tickCount={2} />
+              <AreaChart data={data}>
+                <XAxis dataKey='minuteUTC' stroke="#155e75" tickCount={2} />
                 <YAxis stroke="#155e75" />
                 <Tooltip bac/>
-                <Area type="monotone" dataKey="waitTime" stroke="#155e75" fill="#06b6d4" />
+                <Area type="monotone" dataKey="waitTimeMin" stroke="#155e75" fill="#06b6d4" />
               </AreaChart>
             </ResponsiveContainer>
             </div>

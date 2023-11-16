@@ -7,15 +7,16 @@ import { Header,
          HospitalGraphHour,
          HospitalGraphWeek} from '@/components/facilityCard/index'
 import dummyDaily from '@/utils/dummydaily';
-import dummyHourly from '@/utils/dummyHourly';
 import dummyWeekly from '@/utils/dummyWeek';
 import Hospitals from "@/utils/hospitals"
+
 
 const albertaChildrensHospital = () => {
  
   const hospital = Hospitals.filter((hospital) => hospital.name === 'Alberta Childrens Hospital')[0];
+  
 
-  return (
+    return (
     <div className='flex flex-col pb-20'>
         <Header name={hospital.name}/>
 
@@ -30,7 +31,7 @@ const albertaChildrensHospital = () => {
             phone={hospital.contactInfo.phone} 
             website={hospital.contactInfo.website} />
           <HospitalAbout about={hospital.aboutInfo} />
-          <HospitalGraphHour data={dummyHourly} />
+          <HospitalGraphHour slug={'albertaChildrensHospital'} />
           <HospitalGraphDay data={dummyDaily}/>
           <HospitalGraphWeek data={dummyWeekly}/>
         </div>
