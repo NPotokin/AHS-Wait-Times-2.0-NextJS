@@ -6,8 +6,6 @@ import { Header,
          HospitalGraphDay,
          HospitalGraphHour,
          HospitalGraphWeek} from '@/components/facilityCard/index'
-import dummyDaily from '@/utils/dummydaily';
-import dummyWeekly from '@/utils/dummyWeek';
 import Hospitals from "@/utils/hospitals"
 
 
@@ -32,8 +30,8 @@ const albertaChildrensHospital = () => {
             website={hospital.contactInfo.website} />
           <HospitalAbout about={hospital.aboutInfo} />
           <HospitalGraphHour slug={'albertaChildrensHospital'} />
-          <HospitalGraphDay data={dummyDaily}/>
-          <HospitalGraphWeek data={dummyWeekly}/>
+          <HospitalGraphDay slug={'albertaChildrensHospital'} />
+          <HospitalGraphWeek slug={'albertaChildrensHospital'}/>
         </div>
     </div>
   )
