@@ -10,6 +10,8 @@ import { MdOutlineAccessTime } from "react-icons/md";
 import { MdAutoGraph } from "react-icons/md";
 import { IoStatsChart } from "react-icons/io5";
 import { IoCalendarOutline } from "react-icons/io5";
+import { PiLinkedinLogoBold } from "react-icons/pi";
+import { PiGithubLogoBold } from "react-icons/pi";
 
 
 export default function Home() {
@@ -42,6 +44,12 @@ export default function Home() {
           className='md:w-1/3 py-3 min-w-[300px] max-w-[450px] w-full min-h-[300px] max-h-[450px] h-full my-auto mx-auto'
         />
        </div>
+
+       <Link 
+        href='/start'
+        className='mx-auto p-4 my-4 border-2 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        Get Started
+      </Link> 
 
        <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
         Why us?
@@ -103,11 +111,17 @@ export default function Home() {
           className=' text-cyan-600 m-1 p-1 mx-auto my-auto md:w-1/3' />
        </div>
 
+       <Link 
+        href='/start'
+        className='mx-auto p-4 my-4 border-2 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        Get Started
+      </Link> 
+
        <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
        How It Works?
        </h1> 
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 ">
         
         <div className="flex flex-col items-center justify-center text-white  bg-cyan-600 rounded-3xl">
           <h1 className='my-4 text-4xl lg:text-5xl font-bold'>Explore:</h1>
@@ -151,6 +165,12 @@ export default function Home() {
 
       </div>
 
+      <Link 
+        href='/start'
+        className='mx-auto p-4 mt-8 mb-4 border-2 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        Get Started
+      </Link> 
+
       <div className="flex flex-col md:flex-row mt-8">
         <Image
           src={landing2}
@@ -171,13 +191,14 @@ export default function Home() {
         
        </div>
 
-        
-      <Link 
-        href='/start'
-        className='mx-auto p-4 border-2 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
-        Get Started
-      </Link> 
-        
+      <div className="flex flex-row mx-auto">
+        <p className='py-3 mx-3 text-cener text-xl leading-loose md:text-xl lg:text-2xl font-normal text-cyan-600'>
+          Developed by Nikita Potokin.
+        </p>
+        <PiLinkedinLogoBold size={40} className='mx-3 my-auto text-cyan-600' />
+        <PiGithubLogoBold  size={40} className='mx-3 my-auto text-cyan-600' />
+
+      </div>  
             
             
     </main>
