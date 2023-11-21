@@ -13,24 +13,23 @@ export async function GET(){
       {
         OR: [
           {
-            yearUTC: currentDate.getUTCFullYear(),
-            monthUTC: currentDate.toLocaleString('default', { month: 'short' }),
-            dayUTC: {lte: currentDate.getUTCDate()},
-            hourUTC: {lte: currentDate.getUTCHours()},
-            minuteUTC: {lte: currentDate.getUTCMinutes()}
+            dateTime: {lte: currentDate}
           },
           {
-            yearUTC: pastDate.getUTCFullYear(),
-            monthUTC: pastDate.toLocaleString('default', { month: 'short' }),
-            dayUTC: {gte: pastDate.getUTCDate()},
-            hourUTC: {gte: pastDate.getUTCHours()},
-            minuteUTC: {gte: pastDate.getUTCMinutes()}
+            dateTime: {gte: pastDate}
           },
         ]
       }
     });
 
-    return Response.json({data});
+    const updatedData = data.map((item) => ({
+      Name: item.Name,
+      slug: item.slug,
+      waitTimeMin: item.waitTimeMin,
+      dateTime: item.dateTime.toLocaleTimeString([], { weekday: 'short', hour: '2-digit', minute: '2-digit' })
+    }));
+
+    return Response.json({updatedData});
     
   } catch (error) {
     return Response.json({ error: `An error ${error} occurred` });

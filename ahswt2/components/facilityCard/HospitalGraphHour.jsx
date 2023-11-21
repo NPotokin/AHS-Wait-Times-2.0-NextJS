@@ -18,7 +18,7 @@ const HospitalGraphHour = (props) => {
       try {
         const response = await fetch('http://localhost:3000/api/hourlyGraph');
         const fetchedData = await response.json();
-        const filteredData = fetchedData.data.filter((item) => item.slug === props.slug);
+        const filteredData = fetchedData.updatedData.filter((item) => item.slug === props.slug);
         setData(filteredData);
       } catch (error) {
         console.error('Error fetching or processing data:', error);
@@ -40,14 +40,14 @@ const HospitalGraphHour = (props) => {
               Average Wait Time: 45 min
             </p> */}
             <h1 className='mx-auto my-2  font-bold text-xl xl:text-2xl text-cyan-800'>
-                Hourly Graph (UTC Time)
+                Hourly Graph 
             </h1>
             <div className='container flex w-full mr-10'>
 
            
             <ResponsiveContainer width={300} height={250}>
               <AreaChart data={data}>
-                <XAxis dataKey='minuteUTC' stroke="#155e75" tickCount={2} />
+                <XAxis dataKey='dateTime' stroke="#155e75" tickCount={2} />
                 <YAxis stroke="#155e75"/>
                 <Tooltip bac/>
                 <Area type="monotone" dataKey="waitTimeMin" stroke="#155e75" fill="#06b6d4" />

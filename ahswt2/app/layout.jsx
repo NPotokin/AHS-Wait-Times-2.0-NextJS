@@ -1,6 +1,12 @@
 import './globals.css'
 
-
+import { Montserrat } from 'next/font/google'
+ 
+// If loading a variable font, you don't need to specify the font weight
+const mons = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,9 +15,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={mons.className}>
       <body 
-        className='bg-cyan-100 p-2 m-2 max-w-7xl mx-auto'>
+        className='bg-white p-2 m-2 max-w-7xl mx-auto'>
         
         {children}
       </body>
