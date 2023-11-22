@@ -10,8 +10,7 @@ import { MdOutlineAccessTime } from "react-icons/md";
 import { MdAutoGraph } from "react-icons/md";
 import { IoStatsChart } from "react-icons/io5";
 import { IoCalendarOutline } from "react-icons/io5";
-import { PiLinkedinLogoBold } from "react-icons/pi";
-import { PiGithubLogoBold } from "react-icons/pi";
+
 
 
 export default function Home() {
@@ -47,7 +46,7 @@ export default function Home() {
 
        <Link 
         href='/start'
-        className='mx-auto p-4 my-4 border-2 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        className='mx-auto p-4 my-4 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Get Started
       </Link> 
 
@@ -113,7 +112,7 @@ export default function Home() {
 
        <Link 
         href='/start'
-        className='mx-auto p-4 my-4 border-2 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        className='mx-auto p-4 my-4 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Get Started
       </Link> 
 
@@ -167,7 +166,7 @@ export default function Home() {
 
       <Link 
         href='/start'
-        className='mx-auto p-4 mt-8 mb-4 border-2 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        className='mx-auto p-4 mt-8 mb-4 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Get Started
       </Link> 
 
@@ -191,14 +190,7 @@ export default function Home() {
         
        </div>
 
-      <div className="flex flex-row mx-auto">
-        <p className='py-3 mx-3 text-cener text-xl leading-loose md:text-xl lg:text-2xl font-normal text-cyan-600'>
-          Developed by Nikita Potokin.
-        </p>
-        <PiLinkedinLogoBold size={40} className='mx-3 my-auto text-cyan-600' />
-        <PiGithubLogoBold  size={40} className='mx-3 my-auto text-cyan-600' />
-
-      </div>  
+        
             
             
     </main>
