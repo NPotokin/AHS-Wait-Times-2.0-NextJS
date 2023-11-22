@@ -1,37 +1,147 @@
-import React from 'react'
-import City from '@/utils/city'
+import start1 from '../assets/start1.png'
+import Image from 'next/image'
+import example from '../assets/example.png'
 import Link from 'next/link'
 
-const CitySeclection = () => {
-  return (
-    <div className='flex flex-col  pb-20'>
 
-        <h1 className='my-6 mx-2 text-cyan-700 text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-4 pt-4 font-bold text-center'>
-            Chose the City in Alberta
-        </h1>
 
-    <div className='grid mx-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
-         
-      {City.map((item) => (
-      <div 
-        key={item.key}
-        className='bg-cyan-200 min-w-[300px] max-w-[450px] w-full aspect-square mx-auto relative rounded-3xl group hover:shadow-2xl shadow-cyan-900 hover:scale-105 duration-1000'>
-        <img src={item.img} 
-             alt={item.name}  
-             className="min-w-[300px] max-w-[450px] w-full aspect-square object-cover rounded-3xl opacity-40" />
-        <div className="absolute  top-[50%] left-[50%] translate-x-[-50%] 
-            translate-y-[-50%] w-full px-8 text-center">
-            <h1 className='pb-3  text-4xl font-semibold text-cyan-950 '>{item.name}</h1>
-            <p className='pt-2 pb-4 text-justify text-md md:text-lg lg:text-xl text-cyan-900 font-medium'>{item.info}</p>
-            <Link 
-            href={item.route}
-            className='text-center bg-transparent p-2 md:p-3 rounded-xl text-md md:text-lg lg:text-xl font-semibold  text-cyan-800 border-cyan-800 border-2 hover:bg-cyan-200 duration-1000'>Chose Service</Link>
+export default function HomePage() {
+return(
+    <main className='container flex flex-col mx-auto'>
+      
+      <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
+        Wait Room Alberta 
+      </h1>
+
+      <div className="flex flex-col md:flex-row mt-8">
+        <Image
+          src={start1}
+          alt=""
+          className='md:w-1/2 py-3 min-w-[300px] max-w-[450px] w-full min-h-[300px] max-h-[450px] h-full my-auto mx-auto'
+        />
+        <div className="flex-col pt-8 md:w-1/2">
+          <div className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
+          Our website is designed to be user-friendly and easy to navigate.
+          </div>
+          <div className='py-3  mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
+          You can search for wait times by facility, location, visit Dashboard page or sign up for Newsletter.
+          </div>
+          <div className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
+          We strive to provide you with best value and flexibility on real-time wait times data. 
+          </div>
         </div>
       </div>
-      ))}
-    </div>
-    </div>
-  )
-};
 
-export default CitySeclection
+       <div className='mt-12 flex flex-col md:flex-row mx-auto'>
+        <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
+          <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
+          Locations: 
+          </h2>
+          <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
+          Select out of 17 locations throughout Alberta, where we collect wait times for health care facilities. Some cities have several health care facilities, while most have only one. Unfortunately, a few facilities are not reporting their wait times. 
+          </p>
+        </div>
+        <Image
+          src={example}
+          className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
+          alt='' />
+       </div>
+
+       <Link 
+        href='/calgary'
+        className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        Visit Location Page
+       </Link> 
+
+      <div className='mt-12 flex flex-col-reverse md:flex-row mx-auto'>
+        <Image
+          src={example}
+          className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
+          alt='' />
+        <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
+          <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
+          Facilities: 
+          </h2>
+          <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
+          See the list of 28 Health Care Facility Cards with real-time statistics and link to the facility page. Unfortunately, a few facilities are not reporting their wait times. 
+          </p>
+        </div>
+      </div>
+
+      <Link 
+        href='/facilities'
+        className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        Visit Facilities Page
+      </Link>
+
+      <div className='mt-12 flex flex-col md:flex-row mx-auto'>
+        <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
+          <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
+          Dashboard: 
+          </h2>
+          <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
+          Explore our detailed analytics for all 28 Health Care Facilities throughout Alberta, including average wait times and graphs for hourly, daily, and weekly trends. This section is currently under development. 
+          </p>
+        </div>
+        <Image
+          src={example}
+          className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
+          alt='' />
+       </div>
+
+       <Link 
+        href='/'
+        className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        Visit Dashboard Page
+       </Link> 
+
+       <div className='mt-12 flex flex-col-reverse md:flex-row mx-auto'>
+        <Image
+          src={example}
+          className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
+          alt='' />
+        <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
+          <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
+          Newsletter: 
+          </h2>
+          <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
+          Sign up for our weekly newsletter to receive personally selected trends, analytics, graphs, and statistics. Not all of the Health Care Facilities available. This section is currently under development. 
+          </p>
+        </div>
+      </div>
+
+      <Link 
+        href='/'
+        className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        Sign up !
+      </Link>
+
+      <div className='mt-12 flex flex-col md:flex-row mx-auto'>
+        <div className='flex flex-col m-1 p-1 md:w-2/3 my-auto'>
+          <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
+          Contact Us: 
+          </h2>
+          <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
+          Have a question or concern? We are here to help! Our team is dedicated to providing you with the best possible experience, and we’re always happy to answer any questions you may have. Please feel free to contact us by email, or by filling out the form on our contact page. We will get back to you as soon as possible. Thank you for choosing WaitRoomAlberta.ca! 
+          </p>
+        </div>
+        <Image
+          src={example}
+          className='m-1 p-1 mx-auto my-auto md:w-1/3 rounded-3xl'
+          alt='' />
+       </div>
+
+       <Link 
+        href='/'
+        className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
+        Contact Us
+       </Link> 
+
+
+
+
+
+    </main>
+
+)
+}
