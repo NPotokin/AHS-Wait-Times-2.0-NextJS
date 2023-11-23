@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import React from 'react'
-import { AreaChart,
-         Area,
+import { LineChart,
+         Line,
          XAxis,
          YAxis,
          Tooltip,
@@ -19,7 +19,7 @@ const HospitalGraphDay = (props) => {
       try {
         const response = await fetch('http://localhost:3000/api/dailyGraph');
         const fetchedData = await response.json();
-        const filteredData = fetchedData.updatedData.filter((item) => item.slug === props.slug);
+        const filteredData = fetchedData.averageWaitTimes.filter((item) => item.slug === props.slug);
         setData(filteredData);
       } catch (error) {
         console.error('Error fetching or processing data:', error);
@@ -30,40 +30,51 @@ const HospitalGraphDay = (props) => {
     fetchData();
 
     // Fetch data every minute
-    const interval = setInterval(fetchData, 60000); // 60000 milliseconds = 1 minute
-  })
+    const interval = setInterval(fetchData, 120000); // 60000 milliseconds = 1 minute
+    // Clean up the interval when the component unmounts or when the effect re-runs
+    return () => clearInterval(interval);
+  }, [props.slug]); // Add props.slug as a dependency to useEffect
+  
 
   return (
-    <div className='bg-cyan-200 min-w-[300px] max-w-[450px] w-full aspect-square rounded-3xl'>
-        <div className="pt-8 flex flex-col rounded-3xl">
-            <div className='flex flex-col mx-auto my-auto  font-semibold text-sm text-cyan-800'>
-            {/* <p className='bg-cyan-600 text-cyan-100 mx-auto px-2 py-1 rounded-lg'>
-              Average Wait Time: 79 min
-            </p> */}
-            <h1 className='mx-auto my-2  font-bold text-xl xl:text-2xl text-cyan-800'>
-                Daily Graph
-            </h1>
-            <div className='container flex w-full mr-10'>
+    <div className=' rounded-3xl grid grid-cols-3 gap-1'>
+      <div 
+        className=' w-full text-cyan-700 bg-white border-4   flex items-center justify-center text-xl font-semibold col-span-3 h-[90px]  border-cyan-600 rounded-3xl'>
+        Daily Information
+      </div>
+      <div 
+        className=' w-full row-span-2 text-cyan-700 bg-white border-4  flex items-center justify-center text-sm font-normal col-span-3 min-h-[189px]  border-cyan-600 rounded-3xl'>
+        <ResponsiveContainer width={350} height={250}>
+          <LineChart data={data} margin={{ top: 10, right: 40, left: 0, bottom: 0 }}>
+            <XAxis dataKey='hour' stroke="#0891b2" />
+            <YAxis stroke="#0891b2"/>
+            <Tooltip bac/>
+            <Line type="monotone" dataKey="averageWaitTime" stroke="#0891b2" strokeWidth={4} dot={false} />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+        
+      <div 
+        className='mx-auto text-center w-full text-cyan-700 bg-white border-4  p-1 m-1 flex flex-col items-center justify-center text-md font-normal col-span-1 h-[189px]  border-cyan-600 rounded-3xl'>
+        Daily Average for Facility
+        <p className='font-bold py-2'>129 min</p>
+      </div>
+      <div 
+        className='mx-auto text-center w-full text-cyan-700 bg-white border-4  p-1 m-1 flex flex-col items-center justify-center text-md font-normal col-span-1 h-[189px]  border-cyan-600 rounded-3xl'>
+        Daily Average for Calgary
+        <p className='font-bold py-2'>160 min</p>
+      </div>
+      <div 
+        className='mx-auto text-center w-full text-cyan-700 bg-white border-4  p-1 m-1 flex flex-col items-center justify-center text-md font-normal col-span-1 h-[189px]  border-cyan-600 rounded-3xl'>
+        Daily Average for Alberta
+        <p className='font-bold py-2'>248 min</p>
+      </div>
 
-           
-            <ResponsiveContainer width={300} height={250}>
-              <AreaChart data={data}>
-                <XAxis dataKey='dateTime' stroke="#155e75" />
-                <YAxis stroke="#155e75" />
-                <Tooltip bac/>
-                <Area type="monotone" dataKey="waitTimeMin" stroke="#155e75" fill="#06b6d4" />
-              </AreaChart>
-            </ResponsiveContainer>
-            </div>
-            {/* <p className='mx-auto mt-4  font-semibold text-sm xl:text-md text-cyan-600'>
-                Updated at 00:00 today
-            </p> */}
-            
-            </div>
-        </div>
+      
     </div>
   )
 }
 
 
 export default HospitalGraphDay;
+

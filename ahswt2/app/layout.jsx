@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
 
             <li className='group p-4 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl hover:bg-cyan-600'>
               <Link 
-                href='/'
+                href='/locations'
                 className='flex text-cyan-600  group-hover:text-white'>
                 <SlLocationPin 
                 className='mx-auto my-auto lg:hidden'

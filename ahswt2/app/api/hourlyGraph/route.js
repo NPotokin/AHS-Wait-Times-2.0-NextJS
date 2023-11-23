@@ -14,7 +14,7 @@ export async function GET(){
     const data = await prisma.hospitalTimeStamp.findMany({
       where: 
       {
-        OR: [
+        AND: [
           {
             dateTime: {lte: currentDate}
           },

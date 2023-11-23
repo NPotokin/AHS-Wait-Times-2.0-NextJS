@@ -137,6 +137,16 @@ return(
         Contact Us
        </Link> 
 
+       <div className='mt-12 flex flex-col md:flex-row mx-auto'>
+        <div className='flex flex-col m-1 p-1 my-auto'>
+          
+          <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-xl lg:text-2xl font-medium text-cyan-700'>
+          At Wait Room Alberta, our commitment revolves around your satisfaction. We work tirelessly to enhance your experience because we believe in delivering excellence at every touchpoint. Our dedicated team continuously strives to innovate, refine, and evolve our services to meet and exceed your expectations. Your journey with us matters, and we're dedicated to making it as seamless, enjoyable, and fulfilling as possible. Thank you for choosing us. Your trust in us drives our relentless pursuit of improvement. 
+          </p>
+        </div>
+       
+       </div>
+
 
 
 
