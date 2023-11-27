@@ -1,6 +1,6 @@
 export async function dataFetcherHr(slug) {
     try {
-      const response = await fetch(`${baseUrl}/api/hourlyGraph`');
+      const response = await fetch(`${baseUrl}/api/hourlyGraph`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

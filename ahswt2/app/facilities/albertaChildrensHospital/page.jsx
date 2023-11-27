@@ -12,17 +12,17 @@ export default async function albertaChildrensHospital() {
   const hospital = Hospitals.filter((hospital) => hospital.name === 'Alberta Childrens Hospital')[0];
   
   
-  const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`', {next: { revalidate: 120 }});
+  const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, {next: { revalidate: 120 }});
   const fetchedDataHr = await responseHr.json();
   const filteredDataHr = fetchedDataHr.updatedData.filter((item) => item.slug === 'albertaChildrensHospital');
   const dataHr = await filteredDataHr;
   
-  const responseDay = await fetch(`${baseUrl}/api/dailyGraph`', {next: { revalidate: 120 }});
+  const responseDay = await fetch(`${baseUrl}/api/dailyGraph`, {next: { revalidate: 120 }});
   const fetchedDataDay = await responseDay.json();
   const filteredDataDay = fetchedDataDay.averageWaitTimes.filter((item) => item.slug === 'albertaChildrensHospital');
   const dataDay = await filteredDataDay;
   
-  const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`', {next: { revalidate: 120 }});
+  const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`, {next: { revalidate: 120 }});
   const fetchedDataWeek = await responseWeek.json();
   const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'albertaChildrensHospital');
   const dataWeek = await filteredDataWeek;

@@ -15,12 +15,12 @@ export default async function airdrieCommunityHealthCentre() {
   const filteredDataHr = fetchedDataHr.updatedData.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
   const dataHr = await filteredDataHr;
   
-  const responseDay = await fetch(`${baseUrl}/api/dailyGraph`', {next: { revalidate: 120 }});
+  const responseDay = await fetch(`${baseUrl}/api/dailyGraph`, {next: { revalidate: 120 }});
   const fetchedDataDay = await responseDay.json();
   const filteredDataDay = fetchedDataDay.averageWaitTimes.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
   const dataDay = await filteredDataDay;
   
-  const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`', {next: { revalidate: 120 }});
+  const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`, {next: { revalidate: 120 }});
   const fetchedDataWeek = await responseWeek.json();
   const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
   const dataWeek = await filteredDataWeek;
