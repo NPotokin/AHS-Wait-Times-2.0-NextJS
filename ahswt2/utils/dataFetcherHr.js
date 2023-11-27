@@ -1,6 +1,6 @@
 export async function dataFetcherHr(slug) {
     try {
-      const response = await fetch('https://ahs-wait-times-2-0-next-js-git-main-npotokins-projects.vercel.app/api/hourlyGraph');
+      const response = await fetch('http://localhost:3000/api/hourlyGraph');
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
