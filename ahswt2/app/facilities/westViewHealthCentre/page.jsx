@@ -7,20 +7,22 @@ import Hospitals from "@/utils/hospitals"
 
 export default async function westViewHealthCentre() {
 
-const hospital = Hospitals.filter((hospital) => hospital.name === 'WestView Health Centre')[0];
+const baseUrl = process.env.BASE_URL;
+ 
+  const hospital = Hospitals.filter((hospital) => hospital.name === 'WestView Health Centre')[0];
 
 
-const responseHr = await fetch('http://localhost:3000/api/hourlyGraph', {next: { revalidate: 120 }});
+const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`', {next: { revalidate: 120 }});
 const fetchedDataHr = await responseHr.json();
 const filteredDataHr = fetchedDataHr.updatedData.filter((item) => item.slug === 'westViewHealthCentre');
 const dataHr = await filteredDataHr;
 
-const responseDay = await fetch('http://localhost:3000/api/dailyGraph', {next: { revalidate: 120 }});
+const responseDay = await fetch(`${baseUrl}/api/dailyGraph`', {next: { revalidate: 120 }});
 const fetchedDataDay = await responseDay.json();
 const filteredDataDay = fetchedDataDay.averageWaitTimes.filter((item) => item.slug === 'westViewHealthCentre');
 const dataDay = await filteredDataDay;
 
-const responseWeek = await fetch('http://localhost:3000/api/weeklyGraph', {next: { revalidate: 120 }});
+const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`', {next: { revalidate: 120 }});
 const fetchedDataWeek = await responseWeek.json();
 const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'westViewHealthCentre');
 const dataWeek = await filteredDataWeek;
