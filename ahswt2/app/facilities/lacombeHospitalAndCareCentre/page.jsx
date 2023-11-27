@@ -1,25 +1,45 @@
-import React from 'react'
 import { Header,
-         HospitalGraphDay,
-         HospitalGraphHour,
-         HospitalGraphWeek} from '@/components/facilityCard/index'
+  HospitalGraphDay,
+  HospitalGraphHour,
+  HospitalGraphWeek} from '@/components/facilityCard/index'
 import Hospitals from "@/utils/hospitals"
 
-const lacombeHospitalAndCareCentre = () => {
- 
-  const hospital = Hospitals.filter((hospital) => hospital.name === 'Lacombe Hospital and Care Centre')[0];
 
-  return (
-    <div className='flex flex-col pb-20'>
-        <Header name={hospital.name}/>
+export default async function lacombeHospitalAndCareCentre() {
 
-        <div className='grid mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3'>
-          <HospitalGraphHour slug={'lacombeHospitalAndCareCentre'} />
-          <HospitalGraphDay slug={'lacombeHospitalAndCareCentre'}/>
-          <HospitalGraphWeek slug={'lacombeHospitalAndCareCentre'}/>
-        </div>
-    </div>
-  )
+const hospital = Hospitals.filter((hospital) => hospital.name === 'Lacombe Hospital and Care Centre')[0];
+
+
+const responseHr = await fetch('http://localhost:3000/api/hourlyGraph', {next: { revalidate: 120 }});
+const fetchedDataHr = await responseHr.json();
+const filteredDataHr = fetchedDataHr.updatedData.filter((item) => item.slug === 'lacombeHospitalAndCareCentre');
+const dataHr = await filteredDataHr;
+
+const responseDay = await fetch('http://localhost:3000/api/dailyGraph', {next: { revalidate: 120 }});
+const fetchedDataDay = await responseDay.json();
+const filteredDataDay = fetchedDataDay.averageWaitTimes.filter((item) => item.slug === 'lacombeHospitalAndCareCentre');
+const dataDay = await filteredDataDay;
+
+const responseWeek = await fetch('http://localhost:3000/api/weeklyGraph', {next: { revalidate: 120 }});
+const fetchedDataWeek = await responseWeek.json();
+const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'lacombeHospitalAndCareCentre');
+const dataWeek = await filteredDataWeek;
+
+
+
+return (
+<div className='flex flex-col pb-20'>
+ <Header name={hospital.name}/>
+
+ <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
+   <HospitalGraphHour data={dataHr} />
+   <HospitalGraphDay data={dataDay} />
+   <HospitalGraphWeek data={dataWeek}/>
+ </div>
+</div>
+)
 }
 
-export default lacombeHospitalAndCareCentre;
+
+
+lacombeHospitalAndCareCentre 

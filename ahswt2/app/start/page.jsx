@@ -10,7 +10,7 @@ return(
     <main className='container flex flex-col mx-auto'>
       
       <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
-        Wait Room Alberta 
+        Alberta Wait Room  
       </h1>
 
       <div className="flex flex-col md:flex-row mt-8">
@@ -141,7 +141,7 @@ return(
         <div className='flex flex-col m-1 p-1 my-auto'>
           
           <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-xl lg:text-2xl font-medium text-cyan-700'>
-          At Wait Room Alberta, our commitment revolves around your satisfaction. We work tirelessly to enhance your experience because we believe in delivering excellence at every touchpoint. Our dedicated team continuously strives to innovate, refine, and evolve our services to meet and exceed your expectations. Your journey with us matters, and we're dedicated to making it as seamless, enjoyable, and fulfilling as possible. Thank you for choosing us. Your trust in us drives our relentless pursuit of improvement. 
+          At Alberta Wait Room, our commitment revolves around your satisfaction. We work tirelessly to enhance your experience because we believe in delivering excellence at every touchpoint. Our dedicated team continuously strives to innovate, refine, and evolve our services to meet and exceed your expectations. Your journey with us matters, and we're dedicated to making it as seamless, enjoyable, and fulfilling as possible. Thank you for choosing us. Your trust in us drives our relentless pursuit of improvement. 
           </p>
         </div>
        

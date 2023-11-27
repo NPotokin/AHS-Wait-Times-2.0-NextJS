@@ -1,24 +1,46 @@
-import React from 'react'
 import { Header,
-         HospitalGraphDay,
-         HospitalGraphHour,
-         HospitalGraphWeek} from '@/components/facilityCard/index'
+  HospitalGraphDay,
+  HospitalGraphHour,
+  HospitalGraphWeek} from '@/components/facilityCard/index'
 import Hospitals from "@/utils/hospitals"
 
-const peterLougheedCentre = () => {
- 
-  const hospital = Hospitals.filter((hospital) => hospital.name === 'Peter Lougheed Centre')[0];
 
-  return (
-    <div className='flex flex-col pb-20'>
-        <Header name={hospital.name}/>
-        <div className='grid mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3'>
-          <HospitalGraphHour slug={'peterLougheedCentre'} />
-          <HospitalGraphDay slug={'peterLougheedCentre'}/>
-          <HospitalGraphWeek slug={'peterLougheedCentre'}/>
-        </div>
-    </div>
-  )
+export default async function peterLougheedCentre() {
+
+const hospital = Hospitals.filter((hospital) => hospital.name === 'Peter Lougheed Centre')[0];
+
+
+const responseHr = await fetch('http://localhost:3000/api/hourlyGraph', {next: { revalidate: 120 }});
+const fetchedDataHr = await responseHr.json();
+const filteredDataHr = fetchedDataHr.updatedData.filter((item) => item.slug === 'peterLougheedCentre');
+const dataHr = await filteredDataHr;
+
+const responseDay = await fetch('http://localhost:3000/api/dailyGraph', {next: { revalidate: 120 }});
+const fetchedDataDay = await responseDay.json();
+const filteredDataDay = fetchedDataDay.averageWaitTimes.filter((item) => item.slug === 'peterLougheedCentre');
+const dataDay = await filteredDataDay;
+
+const responseWeek = await fetch('http://localhost:3000/api/weeklyGraph', {next: { revalidate: 120 }});
+const fetchedDataWeek = await responseWeek.json();
+const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'peterLougheedCentre');
+const dataWeek = await filteredDataWeek;
+
+
+
+return (
+<div className='flex flex-col pb-20'>
+ <Header name={hospital.name}/>
+
+ <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
+   <HospitalGraphHour data={dataHr} />
+   <HospitalGraphDay data={dataDay} />
+   <HospitalGraphWeek data={dataWeek}/>
+ </div>
+</div>
+)
 }
 
-export default peterLougheedCentre;
+
+
+
+ 

@@ -18,7 +18,7 @@ export default function Home() {
     <main className='container flex flex-col mx-auto'>
       
       <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
-        Welcome to WaitRoomAlberta.ca <br/>
+        Welcome to AlbertaWaitRoom.ca <br/>
       </h1>
       <h1 className='py-3 mx-3 text-center text-3xl lg:text-5xl font-semibold text-cyan-800'>
         Your Gateway to Informed Healthcare Decisions!
@@ -27,7 +27,7 @@ export default function Home() {
       <div className="flex flex-col-reverse md:flex-row">
         <div className="flex-col pt-8 md:w-2/3">
           <div className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-          At WaitRoomAlberta.ca, we understand that your time is precious, especially when it comes to healthcare.
+          At AlbertaWaitRoom.ca, we understand that your time is precious, especially when it comes to healthcare.
           </div>
           <div className='py-3  mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
           That is why we have created a powerful platform dedicated to providing you with real-time insights 
@@ -102,7 +102,7 @@ export default function Home() {
           Plan Your Visit: 
           </h2>
           <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-          With WaitRoomAlberta.ca you can plan your medical visits more effectively. Be in control of your time by choosing the right facility based on real-time wait time data.
+          With AlbertaWaitRoom.ca you can plan your medical visits more effectively. Be in control of your time by choosing the right facility based on real-time wait time data.
           </p>
         </div>
         <IoCalendarOutline 
@@ -181,7 +181,7 @@ export default function Home() {
           Your time is valuable, and so is your health.
           </div>
           <div className='py-3  mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-          Experience the power of informed choices - visit WaitRoomAlberta.ca today!
+          Experience the power of informed choices - visit AlbertaWaitRoom.ca today!
           </div>
           <div className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
           Your journey to better healthcare starts here.

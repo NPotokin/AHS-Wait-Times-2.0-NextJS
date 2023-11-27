@@ -27,7 +27,6 @@ export async function GET(){
 
 
     const updatedData = data.map((item) => ({
-      Name: item.Name,
       slug: item.slug,
       waitTimeMin: item.waitTimeMin,
       dateTime: item.dateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
