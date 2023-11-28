@@ -4,6 +4,7 @@ import { Header,
          HospitalGraphHour,
          HospitalGraphWeek} from '@/components/facilityCard/index'
 import Hospitals from "@/utils/hospitals"
+import next from 'next';
 
 export default async function airdrieCommunityHealthCentre() {
 
@@ -25,6 +26,18 @@ export default async function airdrieCommunityHealthCentre() {
   const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
   const dataWeek = await filteredDataWeek;
 
+  const responseAvgs = await fetch(`${baseUrl}/api/albertaAverages`, {next: {revalidate: 120}});
+  const avgs = await responseAvgs.json();
+  const abHr = avgs.avgHr;
+  const abHrAvg = await abHr;
+  const abDay = avgs.avgDay;
+  const abDayAvg = await abDay;
+  const abWeek = avgs.avgWeek;
+  const abWeekAvg = await abWeek;
+
+  
+
+
 
 
     return (
@@ -32,9 +45,9 @@ export default async function airdrieCommunityHealthCentre() {
         <Header name={hospital.name}/>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
-          <HospitalGraphHour data={dataHr} />
-          <HospitalGraphDay data={dataDay} />
-          <HospitalGraphWeek data={dataWeek}/>
+          <HospitalGraphHour data={dataHr}  avgs={abHrAvg} />
+          <HospitalGraphDay data={dataDay}  avgs={abDayAvg}/>
+          <HospitalGraphWeek data={dataWeek} avgs={abWeekAvg}/>
         </div>
     </div>
   )

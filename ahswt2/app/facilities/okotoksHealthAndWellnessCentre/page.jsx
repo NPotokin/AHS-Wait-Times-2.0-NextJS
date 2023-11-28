@@ -27,6 +27,15 @@ const fetchedDataWeek = await responseWeek.json();
 const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'okotoksHealthAndWellnessCentre');
 const dataWeek = await filteredDataWeek;
 
+  const responseAvgs = await fetch(`${baseUrl}/api/albertaAverages`, {next: {revalidate: 120}});
+  const avgs = await responseAvgs.json();
+  const abHr = avgs.avgHr;
+  const abHrAvg = await abHr;
+  const abDay = avgs.avgDay;
+  const abDayAvg = await abDay;
+  const abWeek = avgs.avgWeek;
+  const abWeekAvg = await abWeek;
+
 
 
 return (
@@ -34,9 +43,9 @@ return (
  <Header name={hospital.name}/>
 
  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
-   <HospitalGraphHour data={dataHr} />
-   <HospitalGraphDay data={dataDay} />
-   <HospitalGraphWeek data={dataWeek}/>
+   <HospitalGraphHour data={dataHr} avgs={abHrAvg} />
+   <HospitalGraphDay data={dataDay} avgs={abDayAvg} />
+   <HospitalGraphWeek data={dataWeek} avgs={abWeekAvg}/>
  </div>
 </div>
 )

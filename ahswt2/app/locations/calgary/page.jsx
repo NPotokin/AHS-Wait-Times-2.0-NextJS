@@ -38,14 +38,10 @@ const Calgary = () => {
                         
                         <div></div>
                     </div>
-                    <div 
-                    className='group-hover:text-white group-hover:bg-cyan-600 p-4 m-1 flex flex-col items-center justify-center text-md font-bold h-[90px] border-4 border-cyan-600 text-cyan-700 rounded-3xl'>
-                        <div className='text-center text-sm md:text-md font-normal'>Wait Time</div>
-                        <div className='text-center text-sm md:text-md font-bold'>126 min</div>
-                    </div>
+                    
 
                     <div 
-                    className='p-2 m-1 col-span-2 flex flex-col items-center justify-center text-md lg:text-lg font-bold min-h-[90px] border-4 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white rounded-3xl'>
+                    className='p-2 m-1 col-span-3 flex flex-col items-center justify-center text-md lg:text-lg font-bold min-h-[90px] border-4 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white rounded-3xl'>
                         <Link 
                             href={item.route}
                             className='mx-auto font-semibold text-xl '>
