@@ -127,7 +127,7 @@ export default function Home() {
           <Image
           src={explore}
           alt=""
-          className='aspect-square rounded-3xl px-4 py-3  max-w-[450px] w-full max-h-[450px] h-full my-auto mx-auto'
+          className='aspect-square  rounded-3xl px-4 py-3  max-w-[350px] w-full max-h-[350px] h-full my-auto mx-auto'
           />
           <p className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Dive into the comprehensive data we provide on wait times across various healthcare facilities in Alberta.</p>
         </div>
@@ -137,7 +137,7 @@ export default function Home() {
           <Image
           src={visualize}
           alt=""
-          className='aspect-square rounded-3xl px-4 py-3  max-w-[450px] w-full max-h-[450px] h-full my-auto mx-auto'
+          className='aspect-square rounded-3xl px-4 py-3  max-w-[350px] w-full max-h-[350px] h-full my-auto mx-auto'
           />
           <h1 className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Our user-friendly graphs and charts make it easy to understand and interpret complex wait time statistics.</h1>
         </div>
@@ -147,19 +147,19 @@ export default function Home() {
           <Image
           src={plan}
           alt=""
-          className='aspect-square rounded-3xl px-4 py-3  max-w-[450px] w-full max-h-[450px] h-full my-auto mx-auto'
+          className='aspect-square rounded-3xl px-4 py-3  max-w-[350px] w-full max-h-[350px] h-full my-auto mx-auto'
           />
-          <h1 className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Make informed decisions by selecting medical facilities that align with your preferences and time constraints.</h1>
+          <h1 className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Make informed decisions by selecting medical facilities that align with your preferences.</h1>
         </div>
 
         <div className="flex flex-col items-center justify-center text-white  bg-cyan-600 rounded-3xl">
-          <h1 className='my-4 text-4xl lg:text-5xl font-bold'>Stay Tuned:</h1>
+          <h1 className='my-4 text-4xl lg:text-5xl font-bold'>Updates:</h1>
           <Image
           src={update}
           alt=""
-          className='aspect-square rounded-3xl px-4 py-3  max-w-[450px] w-full max-h-[450px] h-full my-auto mx-auto'
+          className='aspect-square rounded-3xl px-4 py-3  max-w-[350px] w-full max-h-[350px] h-full my-auto mx-auto'
           />
-          <h1 className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Receive regular updates and insights tailored to your preferences, ensuring you are always in the know.</h1>
+          <h1 className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Receive regular updates tailored to your preferences, ensuring you are always in the know.</h1>
         </div>
 
       </div>

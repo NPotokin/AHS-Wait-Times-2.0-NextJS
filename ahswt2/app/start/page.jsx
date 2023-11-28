@@ -1,5 +1,7 @@
 import start1 from '../assets/start1.png'
 import Image from 'next/image'
+import locationPage from '../assets/locationPage.png'
+import facilityPage from '../assets/facilityPage.png'
 import example from '../assets/example.png'
 import Link from 'next/link'
 
@@ -42,20 +44,20 @@ return(
           </p>
         </div>
         <Image
-          src={example}
+          src={locationPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
           alt='' />
        </div>
 
        <Link 
-        href='/calgary'
+        href='/locations'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Visit Location Page
        </Link> 
 
       <div className='mt-12 flex flex-col-reverse md:flex-row mx-auto'>
         <Image
-          src={example}
+          src={facilityPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
           alt='' />
         <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
