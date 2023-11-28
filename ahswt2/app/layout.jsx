@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
 
             <li className='group p-4 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl hover:bg-cyan-600'>
               <Link 
-                href='/'
+                href='/dashboard'
                 className='flex text-cyan-600  group-hover:text-white'>
                 <MdOutlineDashboardCustomize 
                 className='mx-auto my-auto lg:hidden'
@@ -107,8 +107,12 @@ export default function RootLayout({ children }) {
           <p className='py-3 mx-3 text-center text-xl leading-loose md:text-xl lg:text-2xl font-normal text-cyan-600'>
             Developed by Nikita Potokin.
           </p>
-          <PiLinkedinLogoBold size={40} className='mx-3 my-auto text-cyan-600' />
-          <PiGithubLogoBold  size={40} className='mx-3 my-auto text-cyan-600' />
+          <Link href='https://www.linkedin.com/in/nikitapotokin/'  target="_blank">
+            <PiLinkedinLogoBold size={40} className='mx-3 my-auto text-cyan-600' />
+          </Link>
+          <Link href='https://github.com/NPotokin' target='_blank'>
+            <PiGithubLogoBold  size={40} className='mx-3 my-auto text-cyan-600' />
+          </Link>
         </div>
 
       </body>
