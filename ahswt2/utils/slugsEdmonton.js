@@ -11,7 +11,12 @@ const slugsEdmonton = [
         'strathconaCommunityHospital',
         'sturgeonCommunityHospital',
         'universityOfAlbertaHospital',
-        'westViewHealthCentre'
+        'westviewHealthCentre'
     ];
 
 export default slugsEdmonton;
+
+
+
+
+

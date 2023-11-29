@@ -23,15 +23,15 @@ export default function LineGraph(props) {
         className='p-2 m-1 flex items-center justify-center text-center w-full text-cyan-700 bg-white min-h-[550px]'>
         <ResponsiveContainer width={'100%'} height={600}>
           <LineChart data={props.data} margin={{ top: 10, right: 10, left: 10, bottom: 10 }}>
-            <XAxis dataKey='dateTime' stroke="#0891b2" allowDuplicatedCategory={false} />
+            <XAxis dataKey={props.dataKeyLineChart} stroke="#0891b2" allowDuplicatedCategory={false} />
             <YAxis  stroke="#0891b2"/>
-            <Tooltip bac/>
+            <Tooltip />
             <Legend layout='horizontal' align='right' verticalAlign='bottom' />
             
             {Array.from(new Set(props.data.map(entry => entry.slug))).map((slug, index) => (
             <Line 
-            key={index} dot={{stroke: rndColor(), strokeWidth: 2}}  stroke={rndColor()} 
-            type="monotone" dataKey="waitTimeMin"  strokeWidth={2}
+            key={index} dot={false}  stroke={rndColor()} 
+            type="linear" dataKey={props.dataKeyLine}  strokeWidth={2}
             data={props.data.filter(entry => entry.slug === slug)} name={slug} />
             ))}
           </LineChart>
