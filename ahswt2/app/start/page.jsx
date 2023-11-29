@@ -2,8 +2,10 @@ import start1 from '../assets/start1.png'
 import Image from 'next/image'
 import locationPage from '../assets/locationPage.png'
 import facilityPage from '../assets/facilityPage.png'
-import example from '../assets/example.png'
+import newsLetterPage from '../assets/newsletterPage.png'
+import contactPage from '../assets/contactPage.png'
 import Link from 'next/link'
+import dashboardPage from '../assets/dashboardPage.png'
 
 
 
@@ -82,24 +84,24 @@ return(
           Dashboard: 
           </h2>
           <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-          Explore our detailed analytics for all 28 Health Care Facilities throughout Alberta, including average wait times and graphs for hourly, daily, and weekly trends. This section is currently under development. 
+          Explore our detailed analytics for all 28 Health Care Facilities throughout Alberta, including average wait times and graphs for hourly, daily, and weekly trends. 
           </p>
         </div>
         <Image
-          src={example}
+          src={dashboardPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
           alt='' />
        </div>
 
        <Link 
-        href='/'
+        href='/dashboard'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Visit Dashboard Page
        </Link> 
 
        <div className='mt-12 flex flex-col-reverse md:flex-row mx-auto'>
         <Image
-          src={example}
+          src={newsLetterPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
           alt='' />
         <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
@@ -113,28 +115,28 @@ return(
       </div>
 
       <Link 
-        href='/'
+        href='/newsletter'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Sign up !
       </Link>
 
       <div className='mt-12 flex flex-col md:flex-row mx-auto'>
-        <div className='flex flex-col m-1 p-1 md:w-2/3 my-auto'>
+        <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
           <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
           Contact Us: 
           </h2>
           <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-          Have a question or concern? We are here to help! Our team is dedicated to providing you with the best possible experience, and we’re always happy to answer any questions you may have. Please feel free to contact us by email, or by filling out the form on our contact page. We will get back to you as soon as possible. Thank you for choosing WaitRoomAlberta.ca! 
+          Have a question or concern? We are here to help! We will get back to you as soon as possible. Thank you for choosing WaitRoomAlberta.ca! 
           </p>
         </div>
         <Image
-          src={example}
-          className='m-1 p-1 mx-auto my-auto md:w-1/3 rounded-3xl'
+          src={contactPage}
+          className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
           alt='' />
        </div>
 
        <Link 
-        href='/'
+        href='/contact'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Contact Us
        </Link> 

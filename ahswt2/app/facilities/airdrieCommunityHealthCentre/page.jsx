@@ -4,7 +4,6 @@ import { Header,
          HospitalGraphHour,
          HospitalGraphWeek} from '@/components/facilityCard/index'
 import Hospitals from "@/utils/hospitals"
-import next from 'next';
 
 export default async function airdrieCommunityHealthCentre() {
 
@@ -13,17 +12,17 @@ export default async function airdrieCommunityHealthCentre() {
   const hospital = Hospitals.filter((hospital) => hospital.name === 'Airdrie Community Health Centre')[0];
   const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, {next: { revalidate: 120 }});
   const fetchedDataHr = await responseHr.json();
-  const filteredDataHr = fetchedDataHr.updatedData.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
+  const filteredDataHr = fetchedDataHr.response.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
   const dataHr = await filteredDataHr;
   
   const responseDay = await fetch(`${baseUrl}/api/dailyGraph`, {next: { revalidate: 120 }});
   const fetchedDataDay = await responseDay.json();
-  const filteredDataDay = fetchedDataDay.averageWaitTimes.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
+  const filteredDataDay = fetchedDataDay.response.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
   const dataDay = await filteredDataDay;
   
   const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`, {next: { revalidate: 120 }});
   const fetchedDataWeek = await responseWeek.json();
-  const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
+  const filteredDataWeek = fetchedDataWeek.response.filter((item) => item.slug === 'airdrieCommunityHealthCentre');
   const dataWeek = await filteredDataWeek;
 
   const responseAvgs = await fetch(`${baseUrl}/api/albertaAverages`, {next: {revalidate: 120}});

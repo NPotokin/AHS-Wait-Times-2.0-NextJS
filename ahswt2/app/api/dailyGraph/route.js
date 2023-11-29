@@ -7,7 +7,7 @@ export async function GET() {
 
     const hoursInDay = 24;
     const hourInMillis = 60 * 60 * 1000;
-    const averageWaitTimes = [];
+    const response = [];
 
     for (let i = 0; i < hoursInDay; i++) {
       const startHour = new Date(pastDate.getTime() + i * hourInMillis);
@@ -36,16 +36,16 @@ export async function GET() {
 
       const hourData = Object.entries(waitTimesForHour).map(([slug, waitTimes]) => ({
         slug,
-        hour: `${startHour.toLocaleTimeString([], { hour: '2-digit', hour12: false })}:00`,
-        averageWaitTime: Math.round(
+        dateTime: `${startHour.toLocaleTimeString([], { hour: '2-digit', hour12: false })}:00`,
+        waitTimeMin: Math.round(
           waitTimes.reduce((acc, val) => acc + val, 0) / waitTimes.length
         ),
       }));
 
-      averageWaitTimes.push(...hourData);
+      response.push(...hourData);
     }
 
-    return Response.json({ averageWaitTimes });
+    return Response.json({ response });
   } catch (error) {
     return Response.json({ error: `An error ${error} occurred` });
   }

@@ -14,17 +14,17 @@ const baseUrl = process.env.BASE_URL;
 
 const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, {next: { revalidate: 120 }});
 const fetchedDataHr = await responseHr.json();
-const filteredDataHr = fetchedDataHr.updatedData.filter((item) => item.slug === 'rockyviewGeneralHospital');
+const filteredDataHr = fetchedDataHr.response.filter((item) => item.slug === 'rockyviewGeneralHospital');
 const dataHr = await filteredDataHr;
 
 const responseDay = await fetch(`${baseUrl}/api/dailyGraph`, {next: { revalidate: 120 }});
 const fetchedDataDay = await responseDay.json();
-const filteredDataDay = fetchedDataDay.averageWaitTimes.filter((item) => item.slug === 'rockyviewGeneralHospital');
+const filteredDataDay = fetchedDataDay.response.filter((item) => item.slug === 'rockyviewGeneralHospital');
 const dataDay = await filteredDataDay;
 
 const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`, {next: { revalidate: 120 }});
 const fetchedDataWeek = await responseWeek.json();
-const filteredDataWeek = fetchedDataWeek.averageWaitTimes.filter((item) => item.slug === 'rockyviewGeneralHospital');
+const filteredDataWeek = fetchedDataWeek.response.filter((item) => item.slug === 'rockyviewGeneralHospital');
 const dataWeek = await filteredDataWeek;
 
   const responseAvgs = await fetch(`${baseUrl}/api/albertaAverages`, {next: {revalidate: 120}});

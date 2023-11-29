@@ -7,7 +7,7 @@ export async function GET() {
 
     const hourInMillis = 60 * 60 * 1000;
     const twentyFourHourInMillis = 24 * hourInMillis;
-    const averageWaitTimes = [];
+    const response = [];
 
     for (let i = pastDate.getTime(); i < currentDate.getTime(); i += twentyFourHourInMillis)  {
       const startHour = new Date(i);
@@ -43,15 +43,15 @@ export async function GET() {
         return {
           slug,
           dateTime: formattedDateTime,
-          averageWaitTime: Math.round(waitTimeArray.reduce((acc, val) => acc + val, 0) / waitTimeArray.length),
+          waitTimeMin: Math.round(waitTimeArray.reduce((acc, val) => acc + val, 0) / waitTimeArray.length),
         };
       });
       
 
-      averageWaitTimes.push(...hourData);
+      response.push(...hourData);
     }
 
-    return Response.json({ averageWaitTimes });
+    return Response.json({ response });
   } catch (error) {
     return Response.json({ error: `An error ${error} occurred` });
   }

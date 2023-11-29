@@ -24,13 +24,13 @@ export async function GET(){
     });
 
 
-    const updatedData = data.map((item) => ({
+    const response = data.map((item) => ({
       slug: item.slug,
       waitTimeMin: item.waitTimeMin,
       dateTime: item.dateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }));
     
-    return Response.json({updatedData});
+    return Response.json({response});
     
   } catch (error) {
     return Response.json({ error: `An error ${error} occurred` });
