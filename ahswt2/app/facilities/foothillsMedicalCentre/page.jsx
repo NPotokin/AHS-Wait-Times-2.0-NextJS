@@ -7,7 +7,7 @@ import Hospitals from "@/utils/hospitals"
 
 export default async function foothillsMedicalCentre() {
 
-const baseUrl = process.env.BASE_URL;
+const baseUrl = process.env.BASE_URL; 
  
   const hospital = Hospitals.filter((hospital) => hospital.name === 'Foothills Medical Centre')[0];
 
