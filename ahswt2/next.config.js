@@ -10,7 +10,7 @@ module.exports = {
           protocol: 'https',
           hostname: 'images.pexels.com',
           port: '',
-          pathname: '',
+          
         },
       ],
     },
