@@ -51,7 +51,7 @@ export default async function ContactPage() {
             <div className="flex flex-col md:flex-row py-4 w-full px-4">
                 <label htmlFor="phone" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Phone Number:</label>
                 <input type="tel" id="phone" name="phone" 
-                required placeholder="Here is mine as an example 1 825 994 3575"
+                required placeholder="Here is mine as an example 1 825 944 2565"
                 className='placeholder-cyan-600/60 w-full md:w-2/3 p-2 flex text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' />
             </div>
 
