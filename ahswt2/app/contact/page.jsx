@@ -59,7 +59,7 @@ export default async function ContactPage() {
                 <label htmlFor="email" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Email:</label>
                 <input type="email" id="email" name="email" 
                 required placeholder="awesomeWaittimeChecker@coolmail.com" 
-                className='placeholder-cyan-600/60 w-full md:w-2/3 p-2 flex text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' />
+                className='placeholder-cyan-600/60 w-full md:w-2/3 flex p-2  text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' />
             </div>
 
             <div className="flex flex-col md:flex-row py-4 w-full px-4">
