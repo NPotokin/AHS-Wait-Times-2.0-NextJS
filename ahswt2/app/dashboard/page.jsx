@@ -80,7 +80,7 @@ export default async function Dashboard(){
 
             <div className="flex flex-col">
                 <h2 className='h-[100px] py-6 px-4  flex items-center justify-center text-center text-3xl md:text-4xl font-semibold text-white bg-cyan-600 rounded-3xl'>
-                Calgary and Othrers 
+                Calgary and Others 
                 </h2>
                 <LineGraph data={dataHrCalgary} />
             </div>
@@ -103,7 +103,7 @@ export default async function Dashboard(){
 
             <div className="flex flex-col">
                 <h2 className='h-[100px] py-6 px-4  flex items-center justify-center text-center text-3xl md:text-4xl font-semibold text-white bg-cyan-600 rounded-3xl'>
-                Calgary and Othrers 
+                Calgary and Others 
                 </h2>
                 <LineGraph data={dataDayCalgary} />
             </div>
@@ -125,7 +125,7 @@ export default async function Dashboard(){
 
             <div className="flex flex-col">
                 <h2 className='h-[100px] py-6 px-4  flex items-center justify-center text-center text-3xl md:text-4xl font-semibold text-white bg-cyan-600 rounded-3xl'>
-                Calgary and Othrers 
+                Calgary and Others 
                 </h2>
                 <LineGraph data={dataWeekCalgary} />
             </div>
