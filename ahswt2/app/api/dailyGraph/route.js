@@ -35,12 +35,13 @@ export async function GET() {
       });
 
       const hourData = Object.entries(waitTimesForHour).map(([slug, waitTimes]) => ({
-        slug,
-        dateTime: `${startHour.toLocaleTimeString([], { hour: '2-digit', hour12: false })}:00`,
-        waitTimeMin: Math.round(
-          waitTimes.reduce((acc, val) => acc + val, 0) / waitTimes.length
-        ),
-      }));
+    slug,
+    dateTime: new Date(startHour.getTime() - 7 * 60 * 60 * 1000).toTimeString().slice(0,5),
+    waitTimeMin: Math.round(
+    waitTimes.reduce((acc, val) => acc + val, 0) / waitTimes.length
+  ),
+}));
+
 
       response.push(...hourData);
     }
