@@ -27,7 +27,7 @@ export async function GET(){
     const response = data.map((item) => ({
       slug: item.slug,
       waitTimeMin: item.waitTimeMin,
-      dateTime: item.dateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      dateTime: item.dateTime.toTimeString([], { timeZone: 'America/Edmonton', hour: '2-digit',  minute: '2-digit' }).slice(0,5)
     }));
     
     return Response.json({response});
