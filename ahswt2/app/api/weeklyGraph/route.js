@@ -36,8 +36,9 @@ export async function GET() {
       });
 
       const hourData = Object.entries(waitTimes).map(([slug, waitTimeArray]) => {
-        const formattedDay = startHour.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        const formattedHour = startHour.toLocaleTimeString([], { hour: '2-digit', hour12: false });
+        const startHourAdjusted = new Date(startHour.getTime() - 7 * 60 * 60 * 1000);
+        const formattedDay = startHourAdjusted.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        const formattedHour = startHourAdjusted.toLocaleTimeString([], { hour: '2-digit', hour12: false });
         const formattedDateTime = `${formattedDay} ${formattedHour}:00`;
       
         return {
@@ -46,6 +47,7 @@ export async function GET() {
           waitTimeMin: Math.round(waitTimeArray.reduce((acc, val) => acc + val, 0) / waitTimeArray.length),
         };
       });
+      
       
 
       response.push(...hourData);
