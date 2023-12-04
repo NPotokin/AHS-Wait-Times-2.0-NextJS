@@ -12,7 +12,7 @@ const baseUrl = process.env.BASE_URL;
   const hospital = Hospitals.filter((hospital) => hospital.name === 'Peter Lougheed Centre')[0];
 
 
-const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, {next: { revalidate: 120 }});
+const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`,  {next: { revalidate: 120 }});
 const fetchedDataHr = await responseHr.json();
 const filteredDataHr = fetchedDataHr.response.filter((item) => item.slug === 'peterLougheedCentre');
 const dataHr = await filteredDataHr;
