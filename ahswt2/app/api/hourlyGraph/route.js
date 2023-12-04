@@ -27,7 +27,7 @@ export async function GET(){
     const response = data.map((item) => ({
       slug: item.slug,
       waitTimeMin: item.waitTimeMin,
-      dateTime: new Date(item.dateTime.getTime() - 6 * 60 * 60 * 1000).toTimeString().slice(0,5)
+      dateTime: new Date(item.dateTime.getTime() - 7 * 60 * 60 * 1000).toTimeString().slice(0,5)
     }));
     
     return Response.json({response});
