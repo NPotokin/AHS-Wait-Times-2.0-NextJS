@@ -12,22 +12,22 @@ const baseUrl = process.env.BASE_URL;
   const hospital = Hospitals.filter((hospital) => hospital.name === 'Royal Alexandra Hospital')[0];
 
 
-const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, { cache: 'no-store' });
+const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, { next: { revalidate: 120 } });
 const fetchedDataHr = await responseHr.json();
 const filteredDataHr = fetchedDataHr.response.filter((item) => item.slug === 'royalAlexandraHospital');
 const dataHr = await filteredDataHr;
 
-const responseDay = await fetch(`${baseUrl}/api/dailyGraph`, { cache: 'no-store' });
+const responseDay = await fetch(`${baseUrl}/api/dailyGraph`, { next: { revalidate: 120 } });
 const fetchedDataDay = await responseDay.json();
 const filteredDataDay = fetchedDataDay.response.filter((item) => item.slug === 'royalAlexandraHospital');
 const dataDay = await filteredDataDay;
 
-const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`, { cache: 'no-store' });
+const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`, { next: { revalidate: 120 } });
 const fetchedDataWeek = await responseWeek.json();
 const filteredDataWeek = fetchedDataWeek.response.filter((item) => item.slug === 'royalAlexandraHospital');
 const dataWeek = await filteredDataWeek;
 
-  const responseAvgs = await fetch(`${baseUrl}/api/albertaAverages`, { cache: 'no-store' });
+  const responseAvgs = await fetch(`${baseUrl}/api/albertaAverages`, { next: { revalidate: 120 } });
   const avgs = await responseAvgs.json();
   const abHr = avgs.avgHr;
   const abHrAvg = await abHr;
