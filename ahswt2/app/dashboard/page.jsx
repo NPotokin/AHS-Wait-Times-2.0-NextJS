@@ -3,6 +3,7 @@ import slugsCalgaryOthers from '@/utils/slugsCalgary';
 import LineGraph from '@/components/facilityCard/LineGraph';
 import Image from 'next/image';
 import dashboard from '../assets/dashboard.png';
+import { revalidatePath } from 'next/cache';
 
 
 
@@ -37,7 +38,7 @@ export default async function Dashboard(){
     const filteredDataWeekCalgaryOthers = fetchedDataWeek.response.filter((item) => slugsCalgaryOthers.includes(item.slug));
     const dataWeekCalgary = await filteredDataWeekCalgaryOthers;
     
-
+    revalidatePath('/app/dashboard');
 
     return(
         <main className='container flex flex-col mx-auto'>
