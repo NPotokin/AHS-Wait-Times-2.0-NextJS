@@ -3,14 +3,13 @@ import slugsCalgaryOthers from '@/utils/slugsCalgary';
 import LineGraph from '@/components/facilityCard/LineGraph';
 import Image from 'next/image';
 import dashboard from '../assets/dashboard.png';
-import { revalidatePath } from 'next/cache';
 
 
 export default async function Dashboard(){
     
     const baseUrl = process.env.BASE_URL;
 
-    const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`);
+    const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, {next: { revalidate: 60 }});
     const fetchedDataHr = await responseHr.json();
     
     const filteredDataHrEdmonton = fetchedDataHr.response.filter((item) => slugsEdmonton.includes(item.slug));
@@ -37,7 +36,6 @@ export default async function Dashboard(){
     const filteredDataWeekCalgaryOthers = fetchedDataWeek.response.filter((item) => slugsCalgaryOthers.includes(item.slug));
     const dataWeekCalgary = await filteredDataWeekCalgaryOthers;
 
-    revalidatePath('/app/dashboard')
 
 
     return(
@@ -46,6 +44,7 @@ export default async function Dashboard(){
         <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
           Dashboard 
         </h1>
+
 
         <div className="flex flex-col md:flex-row">
         
@@ -137,5 +136,7 @@ export default async function Dashboard(){
 
         </main>
     )
+
+    
 }
 
