@@ -5,7 +5,7 @@ import Image from 'next/image';
 import dashboard from '../assets/dashboard.png';
 
 
-export const revalidate = 30;
+export const revalidate = 0;
 
 export default async function Dashboard(){
     
