@@ -4,7 +4,7 @@ import LineGraph from '@/components/facilityCard/LineGraph';
 import Image from 'next/image';
 import dashboard from '../assets/dashboard.png';
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 export default async function Dashboard(){
     
