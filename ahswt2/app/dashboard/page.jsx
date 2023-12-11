@@ -10,7 +10,7 @@ export default async function Dashboard(){
     
     const baseUrl = process.env.BASE_URL;
 
-    const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`);
+    const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, {cache: 'no-store'});
     const fetchedDataHr = await responseHr.json();
     
     const filteredDataHrEdmonton = fetchedDataHr.response.filter((item) => slugsEdmonton.includes(item.slug));

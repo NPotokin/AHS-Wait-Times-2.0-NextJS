@@ -10,8 +10,6 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import { MdOutlineRefresh } from "react-icons/md";
-import revalidateDashboard from '@/app/actions/revalidateDashboard';
 
 
 export default function LineGraph(props) {
@@ -37,9 +35,6 @@ export default function LineGraph(props) {
     <div className='rounded-3xl mt-4 border-4 border-cyan-600 p-2 m-1 text-sm font-normal'>
       
       <div className='p-2 m-1 flex items-center justify-center text-center w-full text-cyan-700 bg-white min-h-[550px]'>
-      <form action={revalidateDashboard}>
-        <button type="submit"><MdOutlineRefresh/></button>
-      </form>
         <ResponsiveContainer width={'100%'} height={600}>
           <LineChart data={props.data} margin={{ top: 10, right: 10, left: 10, bottom: 10 }}>
             <XAxis dataKey='dateTime' stroke="#0891b2" allowDuplicatedCategory={false} />
