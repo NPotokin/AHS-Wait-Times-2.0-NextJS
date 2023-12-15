@@ -5,6 +5,8 @@ import { Header,
          HospitalGraphWeek} from '@/components/facilityCard/index'
 import Hospitals from "@/utils/hospitals"
 
+
+
 export default async function airdrieCommunityHealthCentre() {
 
   const baseUrl = process.env.BASE_URL;
