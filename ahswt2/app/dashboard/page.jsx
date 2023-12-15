@@ -4,13 +4,12 @@ import LineGraph from '@/components/facilityCard/LineGraph';
 import Image from 'next/image';
 import dashboard from '../assets/dashboard.png';
 
-export const dynamic = 'force-dynamic';
 
 export default async function Dashboard(){
     
     const baseUrl = process.env.BASE_URL;
 
-    const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, {cache: 'no-store'});
+    const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`);
     const fetchedDataHr = await responseHr.json();
     
     const filteredDataHrEdmonton = fetchedDataHr.response.filter((item) => slugsEdmonton.includes(item.slug));

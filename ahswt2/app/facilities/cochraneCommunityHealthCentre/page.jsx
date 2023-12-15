@@ -12,22 +12,22 @@ const baseUrl = process.env.BASE_URL;
   const hospital = Hospitals.filter((hospital) => hospital.name === 'Cochrane Community Health Centre')[0];
 
 
-const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, { next: { revalidate: 120 } });
+const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`);
 const fetchedDataHr = await responseHr.json();
 const filteredDataHr = fetchedDataHr.response.filter((item) => item.slug === 'cochraneCommunityHealthCentre');
 const dataHr = await filteredDataHr;
 
-const responseDay = await fetch(`${baseUrl}/api/dailyGraph`, { next: { revalidate: 120 } });
+const responseDay = await fetch(`${baseUrl}/api/dailyGraph`);
 const fetchedDataDay = await responseDay.json();
 const filteredDataDay = fetchedDataDay.response.filter((item) => item.slug === 'cochraneCommunityHealthCentre');
 const dataDay = await filteredDataDay;
 
-const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`, { next: { revalidate: 120 } });
+const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`);
 const fetchedDataWeek = await responseWeek.json();
 const filteredDataWeek = fetchedDataWeek.response.filter((item) => item.slug === 'cochraneCommunityHealthCentre');
 const dataWeek = await filteredDataWeek;
 
-  const responseAvgs = await fetch(`${baseUrl}/api/albertaAverages`, { next: { revalidate: 120 } });
+  const responseAvgs = await fetch(`${baseUrl}/api/albertaAverages`);
   const avgs = await responseAvgs.json();
   const abHr = avgs.avgHr;
   const abHrAvg = await abHr;
