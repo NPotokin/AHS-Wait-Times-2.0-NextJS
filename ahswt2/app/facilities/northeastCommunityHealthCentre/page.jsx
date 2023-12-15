@@ -2,7 +2,11 @@ import { Header,
   HospitalGraphDay,
   HospitalGraphHour,
   HospitalGraphWeek} from '@/components/facilityCard/index'
-import Hospitals from "@/utils/hospitals"
+import Hospitals from "@/utils/hospitals"    
+
+export const revalidate = 30;
+
+
 
 
 export default async function northeastCommunityHealthCentre() {
