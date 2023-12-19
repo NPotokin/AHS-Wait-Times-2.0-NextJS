@@ -1,6 +1,6 @@
 import prisma from '@/prisma/prismaClient'
 
-export const revalidate = 30;
+export const dynamic = 'force-dynamic';
 
 export async function GET(){
  
