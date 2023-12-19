@@ -38,7 +38,7 @@ export default async function Dashboard(){
     const filteredDataWeekCalgaryOthers = fetchedDataWeek.response.filter((item) => slugsCalgaryOthers.includes(item.slug));
     const dataWeekCalgary = await filteredDataWeekCalgaryOthers;
 
-    revalidatePath('/app/api/hourlyGraph')
+    revalidatePath(`${baseUrl}/api/hourlyGraph`)
 
 
 
