@@ -1,4 +1,5 @@
 import prisma from '@/prisma/prismaClient'
+import { revalidatePath } from 'next/cache';
 
 export async function GET() {
   try {
