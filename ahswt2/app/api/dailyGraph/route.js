@@ -1,5 +1,4 @@
 import prisma from '@/prisma/prismaClient'
-import { revalidatePath } from 'next/cache';
 
 
 
