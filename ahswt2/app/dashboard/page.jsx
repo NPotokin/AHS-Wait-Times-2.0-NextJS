@@ -4,13 +4,17 @@ import LineGraph from '@/components/facilityCard/LineGraph';
 import Image from 'next/image';
 import dashboard from '../assets/dashboard.png';
 
+
+
+
 export const revalidate = 30;
+
 
 export default async function Dashboard(){
     
     const baseUrl = process.env.BASE_URL;
 
-    const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`, { cache: 'no-store' });
+    const responseHr = await fetch(`${baseUrl}/api/hourlyGraph`);
     const fetchedDataHr = await responseHr.json();
     
     const filteredDataHrEdmonton = fetchedDataHr.response.filter((item) => slugsEdmonton.includes(item.slug));
@@ -19,7 +23,7 @@ export default async function Dashboard(){
     const filteredDataHrCalgaryOthers = fetchedDataHr.response.filter((item) => slugsCalgaryOthers.includes(item.slug));
     const dataHrCalgary = await filteredDataHrCalgaryOthers;
 
-    const responseDay = await fetch(`${baseUrl}/api/dailyGraph`, { cache: 'no-store' });
+    const responseDay = await fetch(`${baseUrl}/api/dailyGraph`);
     const fetchedDataDay = await responseDay.json();
 
     const filteredDataDayEdmonton = fetchedDataDay.response.filter((item) => slugsEdmonton.includes(item.slug));
@@ -28,7 +32,7 @@ export default async function Dashboard(){
     const filteredDataDayCalgaryOthers = fetchedDataDay.response.filter((item) => slugsCalgaryOthers.includes(item.slug));
     const dataDayCalgary = await filteredDataDayCalgaryOthers;
     
-    const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`, { cache: 'no-store' });
+    const responseWeek = await fetch(`${baseUrl}/api/weeklyGraph`);
     const fetchedDataWeek = await responseWeek.json();
 
     const filteredDataWeekEdmonton = fetchedDataWeek.response.filter((item) => slugsEdmonton.includes(item.slug));
