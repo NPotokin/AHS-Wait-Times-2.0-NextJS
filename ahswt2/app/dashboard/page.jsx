@@ -6,10 +6,6 @@ import dashboard from '../assets/dashboard.png';
 
 
 
-
-export const revalidate = 30;
-
-
 export default async function Dashboard(){
     
     const baseUrl = process.env.BASE_URL;

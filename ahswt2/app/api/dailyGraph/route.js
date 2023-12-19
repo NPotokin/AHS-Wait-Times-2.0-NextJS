@@ -1,7 +1,7 @@
 import prisma from '@/prisma/prismaClient'
 import { revalidatePath } from 'next/cache';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 30;
 
 export async function GET() {
   try {
