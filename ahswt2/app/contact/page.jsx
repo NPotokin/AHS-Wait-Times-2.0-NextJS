@@ -1,6 +1,6 @@
 import Image from "next/image"
 import contact from '../assets/contact.png'
-import action from "../actions/contactToDB"
+import contactToDB from "../actions/contactToDB"
 import Link from "next/link"
 
 
@@ -35,7 +35,7 @@ export default async function ContactPage() {
 
           <form
           className="my-4 flex flex-col items-center justify-center text-md lg:text-lg font-bold min-h-[90px] text-cyan-700 rounded-3xl" 
-          action={action}>
+          action={contactToDB}>
 
             <h1 className='py-6 px-4 my-2 text-center text-3xl lg:text-6xl font-bold text-cyan-700 rounded-3xl'>
                 Contact: 
@@ -70,11 +70,12 @@ export default async function ContactPage() {
                 ></textarea>
             </div>
 
-            <button href='/facilities'
+            
+            <button 
             className="mx-auto p-4 px-6 my-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white" 
-            type="submit">
-                <Link href='contact/thankyou'>Submit!</Link>
+            type="submit" >Submit!
             </button>
+               
 
           </form>
 
