@@ -24,7 +24,7 @@ export default async function contactToDB(formData){
 
 
         Response.json(newEntry);
-        redirect('/app/contact/thankyou');
+        redirect('app/contact/thankyou/');
 
     } catch (error) {
         return Response.json({ error: `An error ${error} occurred` });
