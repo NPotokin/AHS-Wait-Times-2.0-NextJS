@@ -1,10 +1,27 @@
+'use client'
+
 import Image from "next/image"
 import contact from '../assets/contact.png'
 import contactToDB from "../actions/contactToDB"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { useState } from "react"
+
+export default function ContactPage() {
+
+  const [name, setName] = useState();
+  const [phone, setPhone] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+  const [loading, setLoading] = useState(false);
+
+  const router = useRouter();
+
+  const handleSubmit = () =>{
+    setLoading(true);
+    router.push('/contact/thankyou')
+  }
 
 
-export default async function ContactPage() {
     return(
         <main className='container flex flex-col mx-auto pb-10'>
           
@@ -43,28 +60,43 @@ export default async function ContactPage() {
 
             <div className="flex flex-col md:flex-row py-4 w-full px-4">
                 <label htmlFor="name" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Name:</label>
-                <input type="text" id="name" name="name" 
+                <input 
+                onChange={e => setName(e.target.value)}
+                type="text" 
+                id="name" 
+                name="name" 
                 required placeholder="Awesome Awesomeson"
                 className='placeholder-cyan-600/60 w-full md:w-2/3 p-2 flex text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' />
             </div>
 
             <div className="flex flex-col md:flex-row py-4 w-full px-4">
                 <label htmlFor="phone" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Phone Number:</label>
-                <input type="tel" id="phone" name="phone" 
+                <input 
+                onChange={e => setPhone(e.target.value)}
+                type="tel" 
+                id="phone" 
+                name="phone" 
                 required placeholder="Here is mine as an example 1 825 944 2565"
                 className='placeholder-cyan-600/60 w-full md:w-2/3 p-2 flex text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' />
             </div>
 
             <div className="flex flex-col md:flex-row py-4 w-full px-4">
                 <label htmlFor="email" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Email:</label>
-                <input type="email" id="email" name="email" 
+                <input 
+                onChange={e => setEmail(e.target.value)}
+                type="email" 
+                id="email" 
+                name="email" 
                 required placeholder="awesomeWaittimeChecker@coolmail.com" 
                 className='placeholder-cyan-600/60 w-full md:w-2/3 flex p-2  text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' />
             </div>
 
             <div className="flex flex-col md:flex-row py-4 w-full px-4">
                 <label htmlFor="message" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Message:</label>
-                <textarea id="message" name="message" 
+                <textarea
+                onChange={e => setMessage(e.target.value)} 
+                id="message" 
+                name="message" 
                 required placeholder="Here is the part where you leave your message! That must feel Great!"
                 className='placeholder-cyan-600/60 w-full md:w-2/3 p-2 flex text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' 
                 ></textarea>
@@ -72,8 +104,13 @@ export default async function ContactPage() {
 
             
             <button 
-            className="mx-auto p-4 px-6 my-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white" 
-            type="submit" >Submit!
+            disabled={!name || !email || !phone || !message}
+            onClick={handleSubmit}
+            className="mx-auto p-4 px-6 my-8 border-4 border-cyan-600 rounded-3xl 
+            font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white
+            disabled:opacity-60" 
+            type="submit" >
+              {loading ? "Sending data..." : 'Submit!'}
             </button>
                
 

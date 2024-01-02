@@ -1,7 +1,6 @@
 'use server'
 
 import prisma from "@/prisma/prismaClient";
-import { redirect } from 'next/navigation'
 
 
 export default async function contactToDB(formData){
@@ -23,8 +22,6 @@ export default async function contactToDB(formData){
         })
 
 
-        Response.json(newEntry);
-        redirect('app/contact/thankyou/');
 
     } catch (error) {
         return Response.json({ error: `An error ${error} occurred` });
