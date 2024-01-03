@@ -108,7 +108,7 @@ export default function ContactPage() {
             onClick={handleSubmit}
             className="mx-auto p-4 px-6 my-8 border-4 border-cyan-600 rounded-3xl 
             font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white
-            disabled:opacity-60" 
+            disabled:text-white disabled:border-white disabled:hover:bg-white" 
             type="submit" >
               {loading ? "Sending data..." : 'Submit!'}
             </button>
