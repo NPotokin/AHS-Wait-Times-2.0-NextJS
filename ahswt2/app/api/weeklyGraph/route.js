@@ -1,7 +1,6 @@
 import prisma from '@/prisma/prismaClient'
 
 
-export const revalidate = 28;
 
 export async function GET() {
   try {
