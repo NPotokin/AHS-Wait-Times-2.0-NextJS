@@ -1,5 +1,6 @@
 import prisma from '@/prisma/prismaClient'
 
+export const dynamic = 'force-dynamic'
 
 export async function GET(){
  
