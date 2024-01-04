@@ -1,9 +1,12 @@
 import slugsEdmonton from '@/utils/slugsEdmonton'
-import slugsCalgaryOthers from '@/utils/slugsCalgary';
-import LineGraph from '@/components/facilityCard/LineGraph';
+import slugsGEA from '@/utils/slugsGEA';
+import slugsCalgary from '@/utils/slugsCalgary'
+import slugsOther from '@/utils/slugsOther';
 import Image from 'next/image';
 import dashboard from '../assets/dashboard.png';
 import DashboardGraphHour from '@/components/dashboard/DashboardGraphHour';
+import DashboardGraphDay from '@/components/dashboard/DashboardGraphDay';
+import DashboardGraphWeek from '@/components/dashboard/DashboardGraphWeek';
 
 
 
@@ -42,8 +45,37 @@ export default function Dashboard(){
         <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
           Edmonton 
         </h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
             <DashboardGraphHour slug={slugsEdmonton}/>
+            <DashboardGraphDay slug={slugsEdmonton}/>
+            <DashboardGraphWeek slug={slugsEdmonton}/>
+        </div>
+
+        <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
+          Greater Edmonton Area 
+        </h1>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+            <DashboardGraphHour slug={slugsGEA}/>
+            <DashboardGraphDay slug={slugsGEA}/>
+            <DashboardGraphWeek slug={slugsGEA}/>
+        </div>
+
+        <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
+          Calgary 
+        </h1>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+            <DashboardGraphHour slug={slugsCalgary}/>
+            <DashboardGraphDay slug={slugsCalgary}/>
+            <DashboardGraphWeek slug={slugsCalgary}/>
+        </div>
+
+        <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
+          Other Beautiful Places 
+        </h1>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+            <DashboardGraphHour slug={slugsOther}/>
+            <DashboardGraphDay slug={slugsOther}/>
+            <DashboardGraphWeek slug={slugsOther}/>
         </div>
 
         

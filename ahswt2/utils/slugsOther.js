@@ -3,7 +3,9 @@ const slugsOther = [
     'redDeerRegionalHospital',
     'grandePrairieRegionalHospital',
     'chinookRegionalHospital',
-    'medicineHatRegionalHospital'
+    'medicineHatRegionalHospital',
+    'airdrieCommunityHealthCentre',
+    'cochraneCommunityHealthCentre'
 ];
 
 export default slugsOther;
