@@ -32,7 +32,6 @@ export default function airdrieCommunityHealthCentre() {
             <AverageWeek />
           </div>
           
-          
         </div>
     </div>
   )
