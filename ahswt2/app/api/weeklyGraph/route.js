@@ -1,4 +1,4 @@
-import prisma from '@/prisma/prismaClient'
+import prisma from '@/prisma/prismaClient';
 
 export const revalidate = 30;
 
@@ -11,11 +11,12 @@ export async function GET() {
     const twentyFourHourInMillis = 24 * hourInMillis;
     const response = [];
 
-    for (let i = pastDate.getTime(); i < currentDate.getTime(); i += twentyFourHourInMillis)  {
+    const queries = [];
+    for (let i = pastDate.getTime(); i < currentDate.getTime(); i += twentyFourHourInMillis) {
       const startHour = new Date(i);
       const endHour = new Date(i + twentyFourHourInMillis);
 
-      const dataFor24Hours = await prisma.hospitalTimeStamp.findMany({
+      const queryPromise = prisma.hospitalTimeStamp.findMany({
         where: {
           dateTime: {
             gte: startHour,
@@ -28,8 +29,13 @@ export async function GET() {
           dateTime: true,
         },
       });
+      queries.push(queryPromise);
+    }
 
+    const results = await Promise.all(queries);
+    results.forEach((dataFor24Hours, index) => {
       const waitTimes = {};
+      const startHour = new Date(pastDate.getTime() + index * twentyFourHourInMillis);
       dataFor24Hours.forEach((item) => {
         if (!waitTimes[item.slug]) {
           waitTimes[item.slug] = [];
@@ -42,18 +48,16 @@ export async function GET() {
         const formattedDay = startHourAdjusted.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         const formattedHour = startHourAdjusted.toLocaleTimeString([], { hour: '2-digit', hour12: false });
         const formattedDateTime = `${formattedDay} ${formattedHour}:00`;
-      
+
         return {
           slug,
           dateTime: formattedDateTime,
           waitTimeMin: Math.round(waitTimeArray.reduce((acc, val) => acc + val, 0) / waitTimeArray.length),
         };
       });
-      
-      
 
       response.push(...hourData);
-    }
+    });
 
     return Response.json({ response });
   } catch (error) {
