@@ -1,11 +1,18 @@
 import React from 'react'
 import { Header,
          HospitalGraphDay,
-         HospitalGraphHour,
+         HospitalGraph3hr,
+         HospitalGraph6hr,
+         HospitalGraph12hr,
          HospitalGraphWeek,
-         AverageHour,
+         HospitalGraphMonth,
          AverageDay,
-         AverageWeek} from '@/components/facilityCard/index'
+         AverageWeek,
+         AverageMonth,
+         Average3hr,
+         Average6hr,
+         Average12hr,
+        } from '@/components/facilityCard/index'
 import Hospitals from "@/utils/hospitals"    
 
   export default function southCalgaryHealthCentre() {
