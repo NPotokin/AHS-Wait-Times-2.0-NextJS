@@ -16,7 +16,7 @@ export default function Locations() {
             
             <div className="flex-col pt-8 md:w-2/3">
                 <div className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-                Our search by location feature offers unparalleled convenience, allowing you to explore services across 17 diverse locations, ensuring accessibility wherever you may be. 
+                Our search by location feature offers unparalleled convenience, allowing you to explore services across 15 diverse locations, ensuring accessibility wherever you may be. 
                 </div>
                 <div className='py-3  mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
                 With access to information on 28 healthcare facilities within these locations, finding the nearest and most suitable care has never been more effortless.

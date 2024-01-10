@@ -34,7 +34,7 @@ export default function Dashboard(){
             Continuously evolving, we refine and innovate to bring you the latest trends and data.
             </div>
             <div className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-            Discover hourly, daily, and weekly analytics presenting trends from Edmonton and across Alberta, reflecting our commitment to precision and comprehensive monitoring. 
+            Discover three, six, and twelve hour, as well as daily, weekly and monthly analytics presenting trends from across Alberta, reflecting our commitment to precision and comprehensive monitoring. 
             </div>
             
         </div>

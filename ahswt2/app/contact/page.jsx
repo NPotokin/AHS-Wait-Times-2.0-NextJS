@@ -97,7 +97,7 @@ export default function ContactPage() {
                 onChange={e => setMessage(e.target.value)} 
                 id="message" 
                 name="message" 
-                required placeholder="Here is the part where you leave your message! That must feel Great!"
+                required placeholder="Here is the part where you leave your message. Submit button will appear once you fill out all of the fields."
                 className='placeholder-cyan-600/60 w-full md:w-2/3 p-2 flex text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' 
                 ></textarea>
             </div>

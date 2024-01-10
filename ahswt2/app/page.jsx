@@ -63,7 +63,7 @@ export default function Home() {
           Comprehensive Timeframe:
           </h2>
           <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-          Our platform offers in-depth insights over longer periods - from hourly updates to daily and weekly statistics, ensuring access to extensive historical data for a comprehensive understanding.
+          Our platform offers in-depth insights over longer periods - from three hours interval to daily and monthly statistics, ensuring access to extensive historical data for a comprehensive understanding.
           </p>
         </div>
        </div>

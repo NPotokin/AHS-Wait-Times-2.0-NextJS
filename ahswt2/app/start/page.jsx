@@ -42,7 +42,7 @@ return(
           Locations: 
           </h2>
           <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-          Select out of 17 locations throughout Alberta, where we collect wait times for health care facilities. Some cities have several health care facilities, while most have only one. Unfortunately, a few facilities are not reporting their wait times. 
+          Select out of 15 locations throughout Alberta, where we collect wait times for health care facilities. Some cities have several health care facilities, while most have only one. Unfortunately, a few facilities are not reporting their wait times. 
           </p>
         </div>
         <Image
@@ -84,7 +84,7 @@ return(
           Dashboard: 
           </h2>
           <p className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-          Explore our detailed analytics for all 28 Health Care Facilities throughout Alberta, including average wait times and graphs for hourly, daily, and weekly trends. 
+          Explore our detailed analytics for Health Care Facilities throughout Alberta, including wait times graphs for the last 3, 6 and 12 hours, as well as daily, weekly, and monthly trends. 
           </p>
         </div>
         <Image
