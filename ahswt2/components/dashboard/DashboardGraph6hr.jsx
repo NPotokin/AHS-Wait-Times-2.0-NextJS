@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { useState } from 'react'
-import { LineChart,
-         Line,
+import { BarChart,
+         Bar,
          XAxis,
          YAxis,
          Tooltip,
@@ -12,17 +12,17 @@ import { LineChart,
 import useSWR from 'swr'
 import LoadingGraph from './LoadingGraph'
 
-const DashboardGraphDay = (props) => {
+const DashboardGraph6hr = (props) => {
 
   const [highlightedLine, setHighlightedLine] = useState(null);
   const [tooltipData, setTooltipData] = useState(null);
 
   const fetcher = (...args) => fetch(...args).then(res => res.json())
-  const { data, error, isLoading } = useSWR(`/api/dailyGraph`, fetcher, { refreshInterval: 60000 }, { refreshWhenHidden: true } )
+  const { data, error, isLoading } = useSWR(`/api/6hrGraph`, fetcher, { refreshInterval: 60000 }, { refreshWhenHidden: true } )
   if (error) return <div>ERROR</div>
   if (isLoading) return <LoadingGraph/>
   const slug = props.slug
-  const filteredDataDay = data.response.filter((item) => slug.includes(item.slug));
+  const filteredData6hr = data.response.filter((item) => slug.includes(item.slug));
   
 
   const handleLineMouseEnter = (slug) => {
@@ -44,12 +44,12 @@ const DashboardGraphDay = (props) => {
     <div className=' rounded-3xl grid grid-cols-3 gap-1'>
       <div 
         className='  w-full text-cyan-700 bg-white border-4  flex items-center justify-center text-xl font-semibold col-span-3 h-[80px]  border-cyan-600 rounded-3xl'>
-        Daily Data
+        6 Hour Data
       </div>
       <div 
         className='w-full row-span-2 text-cyan-700 bg-white border-4 flex items-center justify-center text-sm font-normal col-span-3   border-cyan-600 rounded-3xl'>
         <ResponsiveContainer width={'100%'} height={600}>
-          <LineChart data={filteredDataDay} margin={{ top: 20, right: 30, left: 5, bottom: 10 }}>
+          <BarChart data={filteredData6hr} margin={{ top: 20, right: 30, left: 5, bottom: 10 }}>
             <XAxis dataKey='dateTime' stroke="#0891b2" allowDuplicatedCategory={false} />
             <YAxis stroke="#0891b2" />
             <Tooltip
@@ -67,22 +67,21 @@ const DashboardGraphDay = (props) => {
                 return null;
               }}
             />
-            {Array.from(new Set(filteredDataDay.map(entry => entry.slug))).map((slug, index) => (
-              <Line
+            {Array.from(new Set(filteredData6hr.map(entry => entry.slug))).map((slug, index) => (
+              <Bar
                 key={index}
                 dot={false}
+                fill={rndColor()}
                 stroke={rndColor()}
-                type="linear"
                 dataKey='waitTimeMin'
-                data={filteredDataDay.filter(entry => entry.slug === slug)}
+                data={filteredData6hr.filter(entry => entry.slug === slug)}
                 name={slug}
-                strokeWidth={highlightedLine === slug ? 4 : 2}
                 onMouseEnter={() => handleLineMouseEnter(slug)}
                 onMouseLeave={handleLineMouseLeave}
               />
             ))}
             <Legend layout='horizontal' align='right' verticalAlign='bottom' />
-          </LineChart>
+          </BarChart>
         </ResponsiveContainer>
       </div>
         
@@ -93,5 +92,5 @@ const DashboardGraphDay = (props) => {
   )
 }
 
-export default DashboardGraphDay;
+export default DashboardGraph6hr;
 

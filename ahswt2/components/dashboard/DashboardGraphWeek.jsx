@@ -44,7 +44,7 @@ const DashboardGraphWeek = (props) => {
     <div className=' rounded-3xl grid grid-cols-3 gap-1'>
       <div 
         className='  w-full text-cyan-700 bg-white border-4  flex items-center justify-center text-xl font-semibold col-span-3 h-[80px]  border-cyan-600 rounded-3xl'>
-        Weekly Information
+        Weekly Data
       </div>
       <div 
         className='w-full row-span-2 text-cyan-700 bg-white border-4 flex items-center justify-center text-sm font-normal col-span-3   border-cyan-600 rounded-3xl'>
@@ -71,8 +71,8 @@ const DashboardGraphWeek = (props) => {
               <Bar
                 key={index}
                 dot={false}
-                stackId="a"
                 fill={rndColor()}
+                stroke={rndColor()}
                 dataKey='waitTimeMin'
                 data={filteredDataWeek.filter(entry => entry.slug === slug)}
                 name={slug}

@@ -4,9 +4,12 @@ import slugsCalgary from '@/utils/slugsCalgary'
 import slugsOther from '@/utils/slugsOther';
 import Image from 'next/image';
 import dashboard from '../assets/dashboard.png';
-import DashboardGraphHour from '@/components/dashboard/DashboardGraphHour';
+import DashboardGraph3hr from '@/components/dashboard/DashboardGraph3hr';
+import DashboardGraph6hr from '@/components/dashboard/DashboardGraph6hr';
+import DashboardGraph12hr from '@/components/dashboard/DashboardGraph12hr';
 import DashboardGraphDay from '@/components/dashboard/DashboardGraphDay';
 import DashboardGraphWeek from '@/components/dashboard/DashboardGraphWeek';
+import DashboardGraphMonth from '@/components/dashboard/DashboardGraphMonth';
 
 
 
@@ -46,36 +49,48 @@ export default function Dashboard(){
           Edmonton 
         </h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
-            <DashboardGraphHour slug={slugsEdmonton}/>
+            <DashboardGraph3hr slug={slugsEdmonton}/>
+            <DashboardGraph6hr slug={slugsEdmonton}/>
+            <DashboardGraph12hr slug={slugsEdmonton}/>
             <DashboardGraphDay slug={slugsEdmonton}/>
             <DashboardGraphWeek slug={slugsEdmonton}/>
+            <DashboardGraphMonth slug={slugsEdmonton}/>
         </div>
 
         <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
           Greater Edmonton Area 
         </h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
-            <DashboardGraphHour slug={slugsGEA}/>
+            <DashboardGraph3hr slug={slugsGEA}/>
+            <DashboardGraph6hr slug={slugsGEA}/>
+            <DashboardGraph12hr slug={slugsGEA}/>
             <DashboardGraphDay slug={slugsGEA}/>
             <DashboardGraphWeek slug={slugsGEA}/>
+            <DashboardGraphMonth slug={slugsGEA}/>
         </div>
 
         <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
           Calgary 
         </h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
-            <DashboardGraphHour slug={slugsCalgary}/>
+            <DashboardGraph3hr slug={slugsCalgary}/>
+            <DashboardGraph6hr slug={slugsCalgary}/>
+            <DashboardGraph12hr slug={slugsCalgary}/>
             <DashboardGraphDay slug={slugsCalgary}/>
             <DashboardGraphWeek slug={slugsCalgary}/>
+            <DashboardGraphMonth slug={slugsCalgary}/>
         </div>
 
         <h1 className='py-8 px-4 my-10 text-center text-3xl lg:text-6xl font-bold text-white bg-cyan-600 rounded-3xl'>
           Other Beautiful Places 
         </h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
-            <DashboardGraphHour slug={slugsOther}/>
+            <DashboardGraph3hr slug={slugsOther}/>
+            <DashboardGraph6hr slug={slugsOther}/>
+            <DashboardGraph12hr slug={slugsOther}/>
             <DashboardGraphDay slug={slugsOther}/>
             <DashboardGraphWeek slug={slugsOther}/>
+            <DashboardGraphMonth slug={slugsOther}/>
         </div>
 
         
