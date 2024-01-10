@@ -13,7 +13,7 @@ import { Header,
          Average6hr,
          Average12hr,
         } from '@/components/facilityCard/index'
-import Hospitals from "@/utils/hospitals"    
+import Hospitals from "@/utils/hospitals"  
 
   export default function southCalgaryHealthCentre() {
    
@@ -25,18 +25,30 @@ import Hospitals from "@/utils/hospitals"
           <Header name={hospital.name}/>
   
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1'>
-            <div className='flex flex-col'>
-              <HospitalGraphHour slug={slug} />
-              <AverageHour />
-            </div>
-            <div className='flex flex-col'>
-              <HospitalGraphDay slug={slug} />
-              <AverageDay />
-            </div>
-            <div className='flex flex-col'>
-              <HospitalGraphWeek slug={slug} />
-              <AverageWeek />
-            </div>
+          <div className='flex flex-col'>
+            <HospitalGraph3hr slug={slug} />
+            <Average3hr />
+          </div>
+          <div className='flex flex-col'>
+            <HospitalGraph6hr slug={slug} />
+            <Average6hr />
+          </div>
+          <div className='flex flex-col'>
+            <HospitalGraph12hr slug={slug} />
+            <Average12hr />
+          </div>
+          <div className='flex flex-col'>
+            <HospitalGraphDay slug={slug} />
+            <AverageDay />
+          </div>
+          <div className='flex flex-col'>
+            <HospitalGraphWeek slug={slug} />
+            <AverageWeek />
+          </div>
+          <div className='flex flex-col'>
+            <HospitalGraphMonth slug={slug} />
+            <AverageMonth />
+          </div>
             
           </div>
       </div>
