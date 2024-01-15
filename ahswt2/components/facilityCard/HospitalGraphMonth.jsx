@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react'
-import { AreaChart,
-         Area,
+import { BarChart,
+         Bar,
          XAxis,
          YAxis,
          Tooltip,
@@ -30,12 +30,12 @@ const HospitalGraphMonth = (props) => {
       <div 
         className='  w-full row-span-2 text-cyan-700 bg-white border-4 flex items-center justify-center text-sm font-normal col-span-3 min-h-[240px]  border-cyan-600 rounded-3xl'>
         <ResponsiveContainer width={'100%'} height={250}>
-          <AreaChart data={filteredDataMonth} margin={{ top: 20, right: 40, left: 0, bottom: 0 }}>
-            <XAxis dataKey='dateTime' stroke="#0891b2" tickCount={1} />
+          <BarChart data={filteredDataMonth} margin={{ top: 20, right: 40, left: 0, bottom: 0 }}>
+            <XAxis dataKey='dateTime' stroke="#0891b2"  />
             <YAxis stroke="#0891b2"/>
             <Tooltip bac/>
-            <Area type="monotone" dataKey="waitTimeMin" stroke="#0891b2" fill="#0891b2" />
-          </AreaChart>
+            <Bar  dataKey="waitTimeMin" stroke="#0891b2" fill="#0891b2" />
+          </BarChart>
         </ResponsiveContainer>
       </div>
         

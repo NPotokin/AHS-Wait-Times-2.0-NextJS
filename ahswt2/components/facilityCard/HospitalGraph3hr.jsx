@@ -34,7 +34,7 @@ const HospitalGraph3hr = (props) => {
             <XAxis dataKey='dateTime' stroke="#0891b2" tickCount={1} />
             <YAxis stroke="#0891b2"/>
             <Tooltip bac/>
-            <Area type="monotone" dataKey="waitTimeMin" stroke="#0891b2" fill="#0891b2" />
+            <Area type="natural" dataKey="waitTimeMin" stroke="#0891b2" fill="#0891b2" />
           </AreaChart>
         </ResponsiveContainer>
       </div>

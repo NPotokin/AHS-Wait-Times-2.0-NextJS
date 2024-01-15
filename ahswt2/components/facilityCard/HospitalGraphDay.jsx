@@ -35,7 +35,7 @@ const HospitalGraphDay = (props) => {
             <XAxis dataKey='dateTime' stroke="#0891b2" />
             <YAxis stroke="#0891b2"/>
             <Tooltip bac/>
-            <Line type="monotone" dataKey="waitTimeMin" stroke="#0891b2" strokeWidth={4} dot={false} />
+            <Line type="natural" dataKey="waitTimeMin" stroke="#0891b2" strokeWidth={4} dot={false} />
           </LineChart>
         </ResponsiveContainer>
       </div>
