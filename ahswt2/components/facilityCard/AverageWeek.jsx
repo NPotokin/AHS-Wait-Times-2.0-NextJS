@@ -8,7 +8,7 @@ import LoadingAverage from './LoadingAverage';
 export default function AverageWeek(){
 
     const fetcher = (...args) => fetch(...args).then(res => res.json())
-    const { data, error, isLoading } = useSWR(`/api/albertaAverages`, fetcher, { refreshInterval: 60000 }, { refreshWhenHidden: true } )
+    const { data, error, isLoading } = useSWR(`/api/weeklyAvg`, fetcher, { refreshInterval: 60000 }, { refreshWhenHidden: true } )
     if (error) return <div>ERROR</div>
     if (isLoading) return <LoadingAverage/>
     const filteredDataWeek = data.avgWeek;
