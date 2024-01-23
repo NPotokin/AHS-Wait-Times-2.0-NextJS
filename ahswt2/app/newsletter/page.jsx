@@ -17,7 +17,7 @@ export default function NewsLetter() {
         <div className="flex flex-col md:flex-row mt-2">
             <Image
             src={working}
-            alt=""
+            alt="people working and brainstorming"
             className='md:w-1/2 py-3  my-auto mx-auto'
             />
             <div className="flex-col pt-8 md:w-1/2">
@@ -35,7 +35,7 @@ export default function NewsLetter() {
           </div>
 
           <Link 
-                href='/contact'
+                href='/contact' aria-label="Visit Contact page"
                 className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
                 Visit Contact page
             </Link> 

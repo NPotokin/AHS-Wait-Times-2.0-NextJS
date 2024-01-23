@@ -49,9 +49,9 @@ const DashboardGraph12hr = (props) => {
       <div 
         className='w-full row-span-2 text-cyan-700 bg-white border-4 flex items-center justify-center text-sm font-normal col-span-3   border-cyan-600 rounded-3xl'>
         <ResponsiveContainer width={'100%'} height={600}>
-          <LineChart data={filteredData12hr} margin={{ top: 20, right: 30, left: 5, bottom: 10 }}>
-            <XAxis dataKey='dateTime' stroke="#0891b2" allowDuplicatedCategory={false} />
-            <YAxis stroke="#0891b2" />
+          <LineChart aria-label='line chart for 12 hours' data={filteredData12hr} margin={{ top: 20, right: 30, left: 5, bottom: 10 }}>
+            <XAxis dataKey='dateTime' stroke="#0891b2" aria-label='time' allowDuplicatedCategory={false} />
+            <YAxis stroke="#0891b2" aria-label='wait time'/>
             <Tooltip
               content={({ active, payload }) => {
                 if (active && payload && payload.length && highlightedLine !== null) {
@@ -73,7 +73,7 @@ const DashboardGraph12hr = (props) => {
                 dot={false}
                 stroke={rndColor()}
                 type="linear"
-                dataKey='waitTimeMin'
+                dataKey='waitTimeMin' aria-label='wait time'
                 data={filteredData12hr.filter(entry => entry.slug === slug)}
                 name={slug}
                 strokeWidth={highlightedLine === slug ? 4 : 2}
@@ -81,7 +81,7 @@ const DashboardGraph12hr = (props) => {
                 onMouseLeave={handleLineMouseLeave}
               />
             ))}
-            <Legend layout='horizontal' align='right' verticalAlign='bottom' />
+            <Legend layout='horizontal' align='right' aria-label='legend' verticalAlign='bottom' />
           </LineChart>
         </ResponsiveContainer>
       </div>

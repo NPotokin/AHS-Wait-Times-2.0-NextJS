@@ -20,7 +20,7 @@ return(
       <div className="flex flex-col md:flex-row mt-8">
         <Image
           src={start1}
-          alt=""
+          alt="doctor communicates with a patient"
           className='md:w-1/2 py-3 min-w-[300px] max-w-[450px] w-full min-h-[300px] max-h-[450px] h-full my-auto mx-auto'
         />
         <div className="flex-col pt-8 md:w-1/2">
@@ -48,11 +48,11 @@ return(
         <Image
           src={locationPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
-          alt='' />
+          alt='image of the locations page' />
        </div>
 
        <Link 
-        href='/locations'
+        href='/locations' aria-label='visit locations page'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Visit Location Page
        </Link> 
@@ -61,7 +61,7 @@ return(
         <Image
           src={facilityPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
-          alt='' />
+          alt='image of the facility page' />
         <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
           <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
           Facilities: 
@@ -73,7 +73,7 @@ return(
       </div>
 
       <Link 
-        href='/facilities'
+        href='/facilities' aria-label='visit facilities page'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Visit Facilities Page
       </Link>
@@ -90,11 +90,11 @@ return(
         <Image
           src={dashboardPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
-          alt='' />
+          alt='image of the dashboard page' />
        </div>
 
        <Link 
-        href='/dashboard'
+        href='/dashboard' aria-label='visit dashboard page'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Visit Dashboard Page
        </Link> 
@@ -103,7 +103,7 @@ return(
         <Image
           src={newsLetterPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
-          alt='' />
+          alt='image of the newsletter page' />
         <div className='flex flex-col m-1 p-1 md:w-1/2 my-auto'>
           <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
           Newsletter: 
@@ -115,7 +115,7 @@ return(
       </div>
 
       <Link 
-        href='/newsletter'
+        href='/newsletter' aria-label='visit newsletter page'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Sign up !
       </Link>
@@ -132,11 +132,11 @@ return(
         <Image
           src={contactPage}
           className='m-1 p-1 mx-auto my-auto md:w-1/2 rounded-3xl'
-          alt='' />
+          alt='image of the contact page' />
        </div>
 
        <Link 
-        href='/contact'
+        href='/contact' aria-label='visit contact page'
         className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Contact Us
        </Link> 
@@ -148,12 +148,7 @@ return(
           At Alberta Wait Room, our commitment revolves around your satisfaction. We work tirelessly to enhance your experience because we believe in delivering excellence at every touchpoint. Our dedicated team continuously strives to innovate, refine, and evolve our services to meet and exceed your expectations. Your journey with us matters, and we are dedicated to making it as seamless, enjoyable, and fulfilling as possible. Thank you for choosing us. Your trust in us drives our relentless pursuit of improvement. 
           </p>
         </div>
-       
        </div>
-
-
-
-
 
     </main>
 

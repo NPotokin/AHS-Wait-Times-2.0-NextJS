@@ -49,9 +49,9 @@ const DashboardGraph6hr = (props) => {
       <div 
         className='w-full row-span-2 text-cyan-700 bg-white border-4 flex items-center justify-center text-sm font-normal col-span-3   border-cyan-600 rounded-3xl'>
         <ResponsiveContainer width={'100%'} height={600}>
-          <BarChart data={filteredData6hr} margin={{ top: 20, right: 30, left: 5, bottom: 10 }}>
-            <XAxis dataKey='dateTime' stroke="#0891b2" allowDuplicatedCategory={false} />
-            <YAxis stroke="#0891b2" />
+          <BarChart data={filteredData6hr} aria-label='bar chart for 6 hours' margin={{ top: 20, right: 30, left: 5, bottom: 10 }}>
+            <XAxis dataKey='dateTime' stroke="#0891b2" aria-label='time' allowDuplicatedCategory={false} />
+            <YAxis stroke="#0891b2" aria-label='wait time'/>
             <Tooltip
               content={({ active, payload }) => {
                 if (active && payload && payload.length && highlightedLine !== null) {
@@ -73,14 +73,14 @@ const DashboardGraph6hr = (props) => {
                 dot={false}
                 fill={rndColor()}
                 stroke={rndColor()}
-                dataKey='waitTimeMin'
+                dataKey='waitTimeMin' aria-label='wait times'
                 data={filteredData6hr.filter(entry => entry.slug === slug)}
                 name={slug}
                 onMouseEnter={() => handleLineMouseEnter(slug)}
                 onMouseLeave={handleLineMouseLeave}
               />
             ))}
-            <Legend layout='horizontal' align='right' verticalAlign='bottom' />
+            <Legend layout='horizontal' align='right' verticalAlign='bottom' aria-label='legend' />
           </BarChart>
         </ResponsiveContainer>
       </div>

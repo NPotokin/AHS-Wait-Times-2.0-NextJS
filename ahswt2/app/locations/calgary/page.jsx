@@ -43,7 +43,7 @@ const Calgary = () => {
                     <div 
                     className='p-2 m-1 col-span-3 flex flex-col items-center justify-center text-md lg:text-lg font-bold min-h-[90px] border-4 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white rounded-3xl'>
                         <Link 
-                            href={item.route}
+                            href={item.route} aria-label='visit facility page'
                             className='mx-auto font-semibold text-xl '>
                             Visit Facility Page
                         </Link>

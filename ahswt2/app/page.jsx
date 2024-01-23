@@ -39,13 +39,14 @@ export default function Home() {
         </div>
         <Image
           src={landing1}
-          alt=""
+          alt="picture of two hospital staff"
           className='md:w-1/3 py-3 min-w-[300px] max-w-[450px] w-full min-h-[300px] max-h-[450px] h-full my-auto mx-auto'
         />
        </div>
 
        <Link 
         href='/start'
+        aria-label='start page'
         className='mx-auto p-4 my-4 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Get Started
       </Link> 
@@ -56,7 +57,7 @@ export default function Home() {
 
        <div className='flex flex-col md:flex-row mx-auto my-6'>
         <MdOutlineAccessTime
-          size={250}
+          size={250} aria-hidden="true"
           className=' text-cyan-600 m-1 p-1 mx-auto my-auto md:w-1/3' />
         <div className='flex flex-col m-1 p-1 md:w-2/3'>
           <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
@@ -78,13 +79,13 @@ export default function Home() {
           </p>
         </div>
         <MdAutoGraph 
-          size={250}
+          size={250} aria-hidden="true"
           className=' text-cyan-600 m-1 p-1 mx-auto my-auto md:w-1/3' />
        </div>
 
        <div className='flex flex-col md:flex-row mx-auto my-6'>
         <IoStatsChart 
-          size={250}
+          size={250} aria-hidden="true"
           className=' text-cyan-600 m-1 p-1 mx-auto my-auto md:w-1/3' />
         <div className='flex flex-col m-1 p-1 md:w-2/3'>
           <h2 className='py-3 mx-3 text-left text-3xl lg:text-5xl font-semibold text-cyan-800'>
@@ -106,12 +107,13 @@ export default function Home() {
           </p>
         </div>
         <IoCalendarOutline 
-          size={250}
+          size={250} aria-hidden="true"
           className=' text-cyan-600 m-1 p-1 mx-auto my-auto md:w-1/3' />
        </div>
 
        <Link 
-        href='/start'
+        href='/start' 
+        aria-label='start page'
         className='mx-auto p-4 my-4 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Get Started
       </Link> 
@@ -126,7 +128,7 @@ export default function Home() {
           <h1 className='my-4 text-4xl lg:text-5xl font-bold'>Explore:</h1>
           <Image
           src={explore}
-          alt=""
+          alt="person at the beggining of his/her way"
           className='aspect-square  rounded-3xl px-4 py-3  max-w-[350px] w-full max-h-[350px] h-full my-auto mx-auto'
           />
           <p className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Dive into the comprehensive data we provide on wait times across various healthcare facilities in Alberta.</p>
@@ -136,7 +138,7 @@ export default function Home() {
           <h1 className='my-4 text-4xl lg:text-5xl font-bold'>Visualize:</h1>
           <Image
           src={visualize}
-          alt=""
+          alt="graphs and charts"
           className='aspect-square rounded-3xl px-4 py-3  max-w-[350px] w-full max-h-[350px] h-full my-auto mx-auto'
           />
           <h1 className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Our user-friendly graphs and charts make it easy to understand and interpret complex wait time statistics.</h1>
@@ -146,7 +148,7 @@ export default function Home() {
           <h1 className='my-4 text-4xl lg:text-5xl font-bold'>Plan:</h1>
           <Image
           src={plan}
-          alt=""
+          alt="person in front of the planning board"
           className='aspect-square rounded-3xl px-4 py-3  max-w-[350px] w-full max-h-[350px] h-full my-auto mx-auto'
           />
           <h1 className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Make informed decisions by selecting medical facilities that align with your preferences.</h1>
@@ -156,7 +158,7 @@ export default function Home() {
           <h1 className='my-4 text-4xl lg:text-5xl font-bold'>Updates:</h1>
           <Image
           src={update}
-          alt=""
+          alt="person checking updates"
           className='aspect-square rounded-3xl px-4 py-3  max-w-[350px] w-full max-h-[350px] h-full my-auto mx-auto'
           />
           <h1 className='mx-8 text-justify leading-loose my-4 text-xl lg:text-2xl font-semibold'>Receive regular updates tailored to your preferences, ensuring you are always in the know.</h1>
@@ -165,7 +167,7 @@ export default function Home() {
       </div>
 
       <Link 
-        href='/start'
+        href='/start' aria-label='start page'
         className='mx-auto p-4 mt-8 mb-4 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
         Get Started
       </Link> 

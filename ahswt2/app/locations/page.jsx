@@ -28,7 +28,7 @@ export default function Locations() {
             </div>
             <Image
             src={location}
-            alt=""
+            alt="person on top of location marker"
             className='md:w-1/3 py-3 min-w-[300px] max-w-[450px] w-full min-h-[300px] max-h-[450px] h-full my-auto mx-auto'
             />
           </div>
@@ -61,7 +61,7 @@ export default function Locations() {
                     <div 
                     className='p-2 m-1 col-span-3 flex flex-col items-center justify-center text-md lg:text-lg font-bold min-h-[90px] border-4 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white rounded-3xl'>
                         <Link 
-                            href={item.route}
+                            href={item.route} aria-label='visit location page'
                             className='mx-auto font-semibold text-xl '>
                             Visit Location Page
                         </Link>

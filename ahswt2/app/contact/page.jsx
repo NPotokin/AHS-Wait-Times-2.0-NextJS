@@ -45,14 +45,16 @@ export default function ContactPage() {
             </div>
             <Image
             src={contact}
-            alt=""
+            alt="person with different means of communication around"
             className='md:w-1/3 py-3 min-w-[300px] max-w-[450px] w-full min-h-[300px] max-h-[450px] h-full my-auto mx-auto'
             />
             </div>
 
           <form
           className="my-4 flex flex-col items-center justify-center text-md lg:text-lg font-bold min-h-[90px] text-cyan-700 rounded-3xl" 
-          action={contactToDB}>
+          action={contactToDB}
+          aria-label="Contact Form"
+          role="form">
 
             <h1 className='py-6 px-4 my-2 text-center text-3xl lg:text-6xl font-bold text-cyan-700 rounded-3xl'>
                 Contact: 
@@ -62,7 +64,7 @@ export default function ContactPage() {
                 <label htmlFor="name" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Name:</label>
                 <input 
                 onChange={e => setName(e.target.value)}
-                type="text" 
+                type="text" aria-label="name"
                 id="name" 
                 name="name" 
                 required placeholder="Awesome Awesomeson"
@@ -73,7 +75,7 @@ export default function ContactPage() {
                 <label htmlFor="phone" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Phone Number:</label>
                 <input 
                 onChange={e => setPhone(e.target.value)}
-                type="tel" 
+                type="tel" aria-label="phone"
                 id="phone" 
                 name="phone" 
                 required placeholder="Here is mine as an example 1 825 944 2565"
@@ -86,7 +88,7 @@ export default function ContactPage() {
                 onChange={e => setEmail(e.target.value)}
                 type="email" 
                 id="email" 
-                name="email" 
+                name="email" aria-label="email"
                 required placeholder="awesomeWaittimeChecker@coolmail.com" 
                 className='placeholder-cyan-600/60 w-full md:w-2/3 flex p-2  text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' />
             </div>
@@ -95,7 +97,7 @@ export default function ContactPage() {
                 <label htmlFor="message" className='w-full md:w-1/3 flex text-center items-center justify-center p-1 m-1 mb-2 text-2xl'>Message:</label>
                 <textarea
                 onChange={e => setMessage(e.target.value)} 
-                id="message" 
+                id="message" aria-label="message"
                 name="message" 
                 required placeholder="Here is the part where you leave your message. Submit button will appear once you fill out all of the fields."
                 className='placeholder-cyan-600/60 w-full md:w-2/3 p-2 flex text-center items-center justify-center border-4 border-cyan-600 rounded-xl focus:outline-none focus:border-cyan-500' 
@@ -105,7 +107,7 @@ export default function ContactPage() {
             
             <button 
             disabled={!name || !email || !phone || !message}
-            onClick={handleSubmit}
+            onClick={handleSubmit} aria-label="submit form"
             className="mx-auto p-4 px-6 my-8 border-4 border-cyan-600 rounded-3xl 
             font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white
             disabled:text-white disabled:border-white disabled:hover:bg-white" 

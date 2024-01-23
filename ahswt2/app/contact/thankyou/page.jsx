@@ -16,7 +16,7 @@ export default async function ThankYou() {
           </h1>
 
           <Link 
-            href='/start'
+            href='/start' aria-label="Go Back to the Homepage"
             className='mx-auto p-4 mt-8 border-4 border-cyan-600 rounded-3xl font-semibold text-2xl text-cyan-600 hover:bg-cyan-600 hover:text-white'>
             Go Back to the Homepage
           </Link>
