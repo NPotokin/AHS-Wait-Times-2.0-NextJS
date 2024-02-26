@@ -8,8 +8,6 @@ import DashboardGraph3hr from '@/components/dashboard/DashboardGraph3hr';
 import DashboardGraph6hr from '@/components/dashboard/DashboardGraph6hr';
 import DashboardGraph12hr from '@/components/dashboard/DashboardGraph12hr';
 import DashboardGraphDay from '@/components/dashboard/DashboardGraphDay';
-import DashboardGraphWeek from '@/components/dashboard/DashboardGraphWeek';
-import DashboardGraphMonth from '@/components/dashboard/DashboardGraphMonth';
 
 
 
@@ -34,7 +32,7 @@ export default function Dashboard(){
             Continuously evolving, we refine and innovate to bring you the latest trends and data.
             </div>
             <div className='py-3 mx-3 text-justify text-xl leading-loose md:text-2xl lg:text-3xl font-medium text-cyan-700'>
-            Discover three, six, and twelve and 24 hours analytics presenting trends from across Alberta, reflecting our commitment to precision and comprehensive monitoring. 
+            Discover three, six, and 12 and 24 hours analytics presenting trends from across Alberta, reflecting our commitment to precision and comprehensive monitoring. 
             </div>
             
         </div>
